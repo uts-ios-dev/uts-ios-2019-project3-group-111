@@ -10,6 +10,9 @@
 		3D278654229AF39E004E7A87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278653229AF39E004E7A87 /* LoginViewController.swift */; };
 		3D278656229B07E9004E7A87 /* AccountFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278655229B07E9004E7A87 /* AccountFormViewController.swift */; };
 		3D27865A229B2367004E7A87 /* AccountFormScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278659229B2367004E7A87 /* AccountFormScrollView.swift */; };
+		3D278660229B468D004E7A87 /* GoDefineTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27865F229B468D004E7A87 /* GoDefineTabBarController.swift */; };
+		3D278662229B5260004E7A87 /* GoDefineNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278661229B5260004E7A87 /* GoDefineNavigationController.swift */; };
+		3D278664229B6475004E7A87 /* TodayPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278663229B6475004E7A87 /* TodayPageViewController.swift */; };
 		3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */; };
 		3DE3C87C229A65BC00EE4F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C87A229A65BC00EE4F20 /* Main.storyboard */; };
 		3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C87D229A65BC00EE4F20 /* GoDefine.xcdatamodeld */; };
@@ -26,6 +29,9 @@
 		3D278653229AF39E004E7A87 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D278655229B07E9004E7A87 /* AccountFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormViewController.swift; sourceTree = "<group>"; };
 		3D278659229B2367004E7A87 /* AccountFormScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormScrollView.swift; sourceTree = "<group>"; };
+		3D27865F229B468D004E7A87 /* GoDefineTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoDefineTabBarController.swift; sourceTree = "<group>"; };
+		3D278661229B5260004E7A87 /* GoDefineNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoDefineNavigationController.swift; sourceTree = "<group>"; };
+		3D278663229B6475004E7A87 /* TodayPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPageViewController.swift; sourceTree = "<group>"; };
 		3DE3C873229A65BC00EE4F20 /* GoDefine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDefine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE3C87B229A65BC00EE4F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				3DE3C898229A7D6900EE4F20 /* AwardsCollectionViewController.swift */,
 				3D278653229AF39E004E7A87 /* LoginViewController.swift */,
 				3D278655229B07E9004E7A87 /* AccountFormViewController.swift */,
+				3D27865F229B468D004E7A87 /* GoDefineTabBarController.swift */,
+				3D278661229B5260004E7A87 /* GoDefineNavigationController.swift */,
+				3D278663229B6475004E7A87 /* TodayPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,10 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE3C899229A7D6900EE4F20 /* AwardsCollectionViewController.swift in Sources */,
+				3D278660229B468D004E7A87 /* GoDefineTabBarController.swift in Sources */,
+				3D278662229B5260004E7A87 /* GoDefineNavigationController.swift in Sources */,
 				3DE3C88D229A6C2A00EE4F20 /* TodayViewController.swift in Sources */,
 				3DE3C893229A6D0100EE4F20 /* SettingsViewController.swift in Sources */,
 				3D278656229B07E9004E7A87 /* AccountFormViewController.swift in Sources */,
 				3DE3C897229A7CB900EE4F20 /* MeTableViewController.swift in Sources */,
+				3D278664229B6475004E7A87 /* TodayPageViewController.swift in Sources */,
 				3D27865A229B2367004E7A87 /* AccountFormScrollView.swift in Sources */,
 				3D278654229AF39E004E7A87 /* LoginViewController.swift in Sources */,
 				3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */,
