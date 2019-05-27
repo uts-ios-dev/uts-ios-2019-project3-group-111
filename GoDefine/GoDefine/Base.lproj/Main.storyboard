@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="today_1" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-OR-wFC">
-                                <rect key="frame" x="42.5" y="83" width="290" height="501.00000000000011"/>
+                                <rect key="frame" x="179.5" y="325.5" width="16" height="16"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,12 +52,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="today_2" translatesAutoresizingMaskIntoConstraints="NO" id="VpS-Cu-Y9O">
-                                <rect key="frame" x="0.0" y="99" width="375" height="483"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="today_2" translatesAutoresizingMaskIntoConstraints="NO" id="VpS-Cu-Y9O">
+                                <rect key="frame" x="-18" y="70" width="409" height="527"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VpS-Cu-Y9O" firstAttribute="centerX" secondItem="zg4-DL-6L7" secondAttribute="centerX" constant="-1" id="aPU-ra-llJ"/>
+                            <constraint firstItem="VpS-Cu-Y9O" firstAttribute="centerY" secondItem="zg4-DL-6L7" secondAttribute="centerY" id="gAb-vB-WpA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TUs-TD-BRn"/>
                     </view>
                 </viewController>
@@ -115,14 +118,25 @@
                     <view key="view" contentMode="scaleToFill" id="QLT-mk-NHb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_page" translatesAutoresizingMaskIntoConstraints="NO" id="PZu-rZ-MUA">
+                                <rect key="frame" x="20" y="91" width="335" height="469"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zl1-uw-9pI" firstAttribute="bottom" secondItem="PZu-rZ-MUA" secondAttribute="bottom" constant="58" id="5n2-rq-QPq"/>
+                            <constraint firstItem="PZu-rZ-MUA" firstAttribute="top" secondItem="Zl1-uw-9pI" secondAttribute="top" constant="27" id="7YY-yl-h59"/>
+                            <constraint firstItem="Zl1-uw-9pI" firstAttribute="trailing" secondItem="PZu-rZ-MUA" secondAttribute="trailing" constant="20" id="PaB-GH-c1f"/>
+                            <constraint firstItem="PZu-rZ-MUA" firstAttribute="leading" secondItem="Zl1-uw-9pI" secondAttribute="leading" constant="20" id="RGO-zl-2Ic"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zl1-uw-9pI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Goals" id="60c-r2-p5V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0U9-2F-qMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3242" y="484"/>
+            <point key="canvasLocation" x="3240.8000000000002" y="483.50824587706148"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Z1N-UU-Xxa">
@@ -747,6 +761,7 @@ GET WORKOUTS DONE</string>
         <image name="awards" width="42" height="44"/>
         <image name="goals" width="44" height="44"/>
         <image name="logo" width="363" height="362"/>
+        <image name="setting_page" width="392" height="551"/>
         <image name="settings" width="40" height="44"/>
         <image name="tab_bg" width="414" height="77"/>
         <image name="today" width="41" height="44"/>
