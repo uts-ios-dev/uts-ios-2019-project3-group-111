@@ -15,45 +15,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorizeHealthKit()
-        
-        
-        WorkoutDataStore.getMostRecentStep(completion: { (steps) in
-            if steps == 0.0 {
-                print("steps :: \(steps)")
-            }
-            else {
-                DispatchQueue.main.async {
-                    print("steps :: \(steps)")
-                }
-            }
-        })
-        
         // Do any additional setup after loading the view.
     }
-    
-    private func authorizeHealthKit() {
-        
-        HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
-            
-            guard authorized else {
-                
-                let baseMessage = "HealthKit Authorization Failed"
-                
-                if let error = error {
-                    print("\(baseMessage). Reason: \(error.localizedDescription)")
-                } else {
-                    print(baseMessage)
-                }
-                
-                return
-            }
-            
-            print("HealthKit Successfully Authorized.")
-        }
-        
-    }
-
     /*
     // MARK: - Navigation
 
