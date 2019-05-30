@@ -30,6 +30,14 @@ class TodayViewController: UIViewController {
         }
     }
     
+    private func loadTheLastRecentWeekWalkingDistance(){
+        WalkingDataStore.shared.getTheLastRecentWeekWalkingDistance(completion: { (steps) in
+            DispatchQueue.main.async {
+                self.lastWeekWalkingDistance.text = String("\(steps)")
+            }
+        })
+    }
+    
     private func loadTodaySteps(){
         SteptCountDataStore.shared.getTodayStepCount(completion: { (steps) in
             DispatchQueue.main.async {
@@ -67,6 +75,7 @@ class TodayViewController: UIViewController {
             self.loadTodaySteps()
             self.loadTheLastRecentWeekStepCount()
             self.loadTodayWalkingDistance()
+            self.loadTheLastRecentWeekWalkingDistance()
             print("HealthKit Successfully Authorized.")
         }
         

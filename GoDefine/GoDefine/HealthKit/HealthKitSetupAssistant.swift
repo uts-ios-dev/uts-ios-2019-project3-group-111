@@ -32,10 +32,13 @@ class HealthKitSetupAssistant {
             let height = HKObjectType.quantityType(forIdentifier: .height),
             let bodyMass = HKObjectType.quantityType(forIdentifier: .bodyMass),
             let steptCount = HKObjectType.quantityType(forIdentifier: .stepCount),
-            
             let walkingDistance = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning),
+            let appleExerciseTime = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.appleExerciseTime),
+            let flightsClimbed = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.flightsClimbed),
+            let appleStandHour = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.appleStandHour),
+            let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)
             
-            let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
+            else {
                 
                 completion(false, HealthkitSetupError.dataTypeNotAvailable)
                 return
@@ -54,7 +57,10 @@ class HealthKitSetupAssistant {
                                                        bodyMass,
                                                        steptCount,
                                                        walkingDistance,
-                                                       HKObjectType.workoutType()]
+                                                       appleExerciseTime,
+                                                       appleStandHour,
+                                                       activeEnergy,
+                                                       flightsClimbed, HKObjectType.workoutType()]
         
         //4. Request Authorization
         HKHealthStore().requestAuthorization(toShare: healthKitTypesToWrite,
