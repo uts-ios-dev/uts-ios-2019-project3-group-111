@@ -23,7 +23,7 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        abcs.append(abc(name: <#T##String#>, color: <#T##UIColor#>, currentData: <#T##Float#>))
+//        abcs.append(abc(name: <#T##String#>, color: <#T##UIColor#>, currentData: <#T##Float#>))
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let inset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
