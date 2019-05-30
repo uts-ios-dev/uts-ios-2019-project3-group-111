@@ -1,0 +1,21 @@
+PODS:
+  - fluid-slider (1.1.0):
+    - pop
+  - pop (1.0.12)
+
+DEPENDENCIES:
+  - fluid-slider
+  - pop (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - fluid-slider
+    - pop
+
+SPEC CHECKSUMS:
+  fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+
+PODFILE CHECKSUM: ce77dfcbef5bf6430cc2cc6b178800c4fcbc0d65
+
+COCOAPODS: 1.5.2
