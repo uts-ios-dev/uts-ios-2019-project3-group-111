@@ -1,19 +1,26 @@
 //
-//  GoalsViewController.swift
+//  AwardDetail+ViewController.swift
 //  GoDefine
 //
-//  Created by Yang Qijun on 26/5/19.
+//  Created by Yang Qijun on 30/5/19.
 //  Copyright © 2019 Yang Qijun. All rights reserved.
 //
 
 import UIKit
 
-class GoalsViewController: UIViewController {
+class AwardDetail_ViewController: UIViewController {
+    
+    var award: Award?
 
+    @IBOutlet weak var awardSymbolImage: UIImageView!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {return .lightContent}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        awardSymbolImage.image = award?.symbol
     }
     
 
