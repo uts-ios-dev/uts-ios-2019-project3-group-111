@@ -1,27 +1,37 @@
 //
-//  AwardsCollectionViewController.swift
+//  TodayDetail+CollectionViewController.swift
 //  GoDefine
 //
-//  Created by Yang Qijun on 26/5/19.
+//  Created by Yang Qijun on 30/5/19.
 //  Copyright © 2019 Yang Qijun. All rights reserved.
 //
 
 import UIKit
+struct abc {
+    var name: String
+    var color: UIColor
+    var currentData: Float
+    
+}
+private let reuseIdentifier = "ActivityDetailCell"
 
-private let reuseIdentifier = "Cell"
-
-class AwardsCollectionViewController: UICollectionViewController {
+class TodayDetail_CollectionViewController: UICollectionViewController {
+    
+    var abcs: [abc] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        abcs.append(abc(name: <#T##String#>, color: <#T##UIColor#>, currentData: <#T##Float#>))
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            let inset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
+            let width = collectionView.frame.width - inset.left - inset.right
+            let height = CGFloat(145.0)
+            layout.itemSize = CGSize(width: width, height: height)
+            layout.sectionInset = inset
+        }
     }
 
     /*
@@ -38,19 +48,23 @@ class AwardsCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell
+        if let activityDetailCell = cell as? DetailData_CollectionViewCell {
+            activityDetailCell.goalLabel.text = abcs[indexPath.row].name
+            return activityDetailCell
+        }
     
         return cell
     }

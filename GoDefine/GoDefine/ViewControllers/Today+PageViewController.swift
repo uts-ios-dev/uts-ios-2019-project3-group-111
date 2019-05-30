@@ -30,9 +30,9 @@ class TodayPageViewController: UIPageViewController, UIPageViewControllerDataSou
         return subViewControllers.count
     }
     
-//    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//        return 0
-//    }
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let theIndex: Int = subViewControllers.firstIndex(of: viewController) ?? 0

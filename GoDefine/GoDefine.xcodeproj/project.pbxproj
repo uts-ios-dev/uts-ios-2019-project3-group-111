@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D278654229AF39E004E7A87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278653229AF39E004E7A87 /* LoginViewController.swift */; };
-		3D278656229B07E9004E7A87 /* AccountFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278655229B07E9004E7A87 /* AccountFormViewController.swift */; };
-		3D27865A229B2367004E7A87 /* AccountFormScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278659229B2367004E7A87 /* AccountFormScrollView.swift */; };
-		3D278660229B468D004E7A87 /* GoDefineTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27865F229B468D004E7A87 /* GoDefineTabBarController.swift */; };
-		3D278662229B5260004E7A87 /* GoDefineNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278661229B5260004E7A87 /* GoDefineNavigationController.swift */; };
-		3D278664229B6475004E7A87 /* TodayPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278663229B6475004E7A87 /* TodayPageViewController.swift */; };
+		3D278654229AF39E004E7A87 /* Login+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278653229AF39E004E7A87 /* Login+ViewController.swift */; };
+		3D278656229B07E9004E7A87 /* AccountForm+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278655229B07E9004E7A87 /* AccountForm+ViewController.swift */; };
+		3D27865A229B2367004E7A87 /* AccountForm+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278659229B2367004E7A87 /* AccountForm+ScrollView.swift */; };
+		3D278660229B468D004E7A87 /* GoDefine+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27865F229B468D004E7A87 /* GoDefine+TabBarController.swift */; };
+		3D278662229B5260004E7A87 /* GoDefine+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278661229B5260004E7A87 /* GoDefine+NavigationController.swift */; };
+		3D278664229B6475004E7A87 /* Today+PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D278663229B6475004E7A87 /* Today+PageViewController.swift */; };
+		3D4AC4D3229EC11200EBBF4F /* AwardsHeader+CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4D2229EC11200EBBF4F /* AwardsHeader+CollectionReusableView.swift */; };
+		3D4AC4D5229EC13600EBBF4F /* Award+CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4D4229EC13600EBBF4F /* Award+CollectionViewCell.swift */; };
+		3D4AC4D7229EE36C00EBBF4F /* AwardDetail+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4D6229EE36C00EBBF4F /* AwardDetail+ViewController.swift */; };
+		3D4AC4D9229F298000EBBF4F /* TodayDetail+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4D8229F298000EBBF4F /* TodayDetail+CollectionViewController.swift */; };
+		3D4AC4DB229F426600EBBF4F /* DetailData+CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4DA229F426600EBBF4F /* DetailData+CollectionViewCell.swift */; };
+		3D861AD0229FCA5F001F7B4E /* DataStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D861ACD229FCA5E001F7B4E /* DataStoreService.swift */; };
+		3D861AD1229FCA5F001F7B4E /* WalkingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D861ACE229FCA5E001F7B4E /* WalkingDataStore.swift */; };
+		3D861AD2229FCA5F001F7B4E /* SteptCountDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D861ACF229FCA5F001F7B4E /* SteptCountDataStore.swift */; };
+		3D861AD8229FCC05001F7B4E /* Comon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D861AD7229FCC04001F7B4E /* Comon.swift */; };
 		3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */; };
 		3DE3C87C229A65BC00EE4F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C87A229A65BC00EE4F20 /* Main.storyboard */; };
 		3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C87D229A65BC00EE4F20 /* GoDefine.xcdatamodeld */; };
 		3DE3C881229A65BE00EE4F20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C880229A65BE00EE4F20 /* Assets.xcassets */; };
 		3DE3C884229A65BE00EE4F20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C882229A65BE00EE4F20 /* LaunchScreen.storyboard */; };
+<<<<<<< HEAD
 		3DE3C88D229A6C2A00EE4F20 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C88C229A6C2A00EE4F20 /* TodayViewController.swift */; };
 		3DE3C891229A6C6D00EE4F20 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C890229A6C6D00EE4F20 /* GoalsViewController.swift */; };
 		3DE3C893229A6D0100EE4F20 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C892229A6D0100EE4F20 /* SettingsViewController.swift */; };
@@ -30,21 +40,39 @@
 		B6180B37229EB2B500490FD9 /* DataStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6180B36229EB2B500490FD9 /* DataStoreService.swift */; };
 		B6180B3A229EBD0C00490FD9 /* Comon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6180B39229EBD0C00490FD9 /* Comon.swift */; };
 		B6180B3C229EC03000490FD9 /* WalkingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6180B3B229EC03000490FD9 /* WalkingDataStore.swift */; };
+=======
+		3DE3C88D229A6C2A00EE4F20 /* Today+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C88C229A6C2A00EE4F20 /* Today+ViewController.swift */; };
+		3DE3C891229A6C6D00EE4F20 /* Goals+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C890229A6C6D00EE4F20 /* Goals+ViewController.swift */; };
+		3DE3C893229A6D0100EE4F20 /* Settings+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C892229A6D0100EE4F20 /* Settings+ViewController.swift */; };
+		3DE3C897229A7CB900EE4F20 /* Me+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C896229A7CB900EE4F20 /* Me+TableViewController.swift */; };
+		3DE3C899229A7D6900EE4F20 /* Awards+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C898229A7D6900EE4F20 /* Awards+CollectionViewController.swift */; };
+>>>>>>> 568f23607e742434d4823e952d632ced14837ead
 		B6399F69229B90F000AD6337 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6399F68229B90F000AD6337 /* HealthKit.framework */; };
 		B6399F6C229B934500AD6337 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F6B229B934500AD6337 /* HealthKitSetupAssistant.swift */; };
 		B6399F6F229B96A400AD6337 /* StoringUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F6E229B96A400AD6337 /* StoringUserProfile.swift */; };
-		B6399F72229B97F500AD6337 /* SteptCountDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F71229B97F500AD6337 /* SteptCountDataStore.swift */; };
 		B6399F74229B985200AD6337 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F73229B985200AD6337 /* Workout.swift */; };
 		B6399F76229B9C7C00AD6337 /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */; };
+		FCF54383C273F054470619D7 /* Pods_GoDefine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D278653229AF39E004E7A87 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3D278655229B07E9004E7A87 /* AccountFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormViewController.swift; sourceTree = "<group>"; };
-		3D278659229B2367004E7A87 /* AccountFormScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormScrollView.swift; sourceTree = "<group>"; };
-		3D27865F229B468D004E7A87 /* GoDefineTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoDefineTabBarController.swift; sourceTree = "<group>"; };
-		3D278661229B5260004E7A87 /* GoDefineNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoDefineNavigationController.swift; sourceTree = "<group>"; };
-		3D278663229B6475004E7A87 /* TodayPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPageViewController.swift; sourceTree = "<group>"; };
+		1D742367212670204216633E /* Pods-GoDefine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDefine.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine.release.xcconfig"; sourceTree = "<group>"; };
+		3D278653229AF39E004E7A87 /* Login+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+ViewController.swift"; sourceTree = "<group>"; };
+		3D278655229B07E9004E7A87 /* AccountForm+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountForm+ViewController.swift"; sourceTree = "<group>"; };
+		3D278659229B2367004E7A87 /* AccountForm+ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountForm+ScrollView.swift"; sourceTree = "<group>"; };
+		3D27865F229B468D004E7A87 /* GoDefine+TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoDefine+TabBarController.swift"; sourceTree = "<group>"; };
+		3D278661229B5260004E7A87 /* GoDefine+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoDefine+NavigationController.swift"; sourceTree = "<group>"; };
+		3D278663229B6475004E7A87 /* Today+PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Today+PageViewController.swift"; sourceTree = "<group>"; };
+		3D357ACA229F7433008B1CE8 /* fluid_slider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = fluid_slider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4AC4D2229EC11200EBBF4F /* AwardsHeader+CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AwardsHeader+CollectionReusableView.swift"; sourceTree = "<group>"; };
+		3D4AC4D4229EC13600EBBF4F /* Award+CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Award+CollectionViewCell.swift"; sourceTree = "<group>"; };
+		3D4AC4D6229EE36C00EBBF4F /* AwardDetail+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AwardDetail+ViewController.swift"; sourceTree = "<group>"; };
+		3D4AC4D8229F298000EBBF4F /* TodayDetail+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayDetail+CollectionViewController.swift"; sourceTree = "<group>"; };
+		3D4AC4DA229F426600EBBF4F /* DetailData+CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailData+CollectionViewCell.swift"; sourceTree = "<group>"; };
+		3D861ACD229FCA5E001F7B4E /* DataStoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreService.swift; sourceTree = "<group>"; };
+		3D861ACE229FCA5E001F7B4E /* WalkingDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingDataStore.swift; sourceTree = "<group>"; };
+		3D861ACF229FCA5F001F7B4E /* SteptCountDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteptCountDataStore.swift; sourceTree = "<group>"; };
+		3D861AD7229FCC04001F7B4E /* Comon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comon.swift; sourceTree = "<group>"; };
 		3DE3C873229A65BC00EE4F20 /* GoDefine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDefine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE3C87B229A65BC00EE4F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +80,7 @@
 		3DE3C880229A65BE00EE4F20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DE3C883229A65BE00EE4F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE3C885229A65BE00EE4F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		3DE3C88C229A6C2A00EE4F20 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		3DE3C890229A6C6D00EE4F20 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		3DE3C892229A6D0100EE4F20 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -64,13 +93,21 @@
 		B6180B36229EB2B500490FD9 /* DataStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreService.swift; sourceTree = "<group>"; };
 		B6180B39229EBD0C00490FD9 /* Comon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comon.swift; sourceTree = "<group>"; };
 		B6180B3B229EC03000490FD9 /* WalkingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingDataStore.swift; sourceTree = "<group>"; };
+=======
+		3DE3C88C229A6C2A00EE4F20 /* Today+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Today+ViewController.swift"; sourceTree = "<group>"; };
+		3DE3C890229A6C6D00EE4F20 /* Goals+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goals+ViewController.swift"; sourceTree = "<group>"; };
+		3DE3C892229A6D0100EE4F20 /* Settings+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+ViewController.swift"; sourceTree = "<group>"; };
+		3DE3C896229A7CB900EE4F20 /* Me+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Me+TableViewController.swift"; sourceTree = "<group>"; };
+		3DE3C898229A7D6900EE4F20 /* Awards+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Awards+CollectionViewController.swift"; sourceTree = "<group>"; };
+		B5D564755AFB71D54EBDC69D /* Pods-GoDefine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDefine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine.debug.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> 568f23607e742434d4823e952d632ced14837ead
 		B6399F68229B90F000AD6337 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B6399F6A229B90F000AD6337 /* GoDefine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoDefine.entitlements; sourceTree = "<group>"; };
 		B6399F6B229B934500AD6337 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		B6399F6E229B96A400AD6337 /* StoringUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoringUserProfile.swift; sourceTree = "<group>"; };
-		B6399F71229B97F500AD6337 /* SteptCountDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteptCountDataStore.swift; sourceTree = "<group>"; };
 		B6399F73229B985200AD6337 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = GoDefine/DataStore/Workout.swift; sourceTree = SOURCE_ROOT; };
 		B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutSession.swift; path = GoDefine/DataStore/WorkoutSession.swift; sourceTree = SOURCE_ROOT; };
+		DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDefine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,16 +116,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6399F69229B90F000AD6337 /* HealthKit.framework in Frameworks */,
+				FCF54383C273F054470619D7 /* Pods_GoDefine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28BFCEEE4BE14D14B6653521 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5D564755AFB71D54EBDC69D /* Pods-GoDefine.debug.xcconfig */,
+				1D742367212670204216633E /* Pods-GoDefine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3D278658229B22FB004E7A87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D278659229B2367004E7A87 /* AccountFormScrollView.swift */,
+				3D278659229B2367004E7A87 /* AccountForm+ScrollView.swift */,
+				3D4AC4D2229EC11200EBBF4F /* AwardsHeader+CollectionReusableView.swift */,
+				3D4AC4D4229EC13600EBBF4F /* Award+CollectionViewCell.swift */,
+				3D4AC4DA229F426600EBBF4F /* DetailData+CollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,12 +152,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3D861AD9229FCC0F001F7B4E /* Comon */ = {
+			isa = PBXGroup;
+			children = (
+				3D861AD7229FCC04001F7B4E /* Comon.swift */,
+			);
+			path = Comon;
+			sourceTree = "<group>";
+		};
 		3DE3C86A229A65BC00EE4F20 = {
 			isa = PBXGroup;
 			children = (
 				3DE3C875229A65BC00EE4F20 /* GoDefine */,
 				3DE3C874229A65BC00EE4F20 /* Products */,
 				B6399F67229B90F000AD6337 /* Frameworks */,
+				28BFCEEE4BE14D14B6653521 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,10 +181,9 @@
 		3DE3C875229A65BC00EE4F20 /* GoDefine */ = {
 			isa = PBXGroup;
 			children = (
-				B6180B38229EBCF300490FD9 /* Comon */,
+				3D861AD9229FCC0F001F7B4E /* Comon */,
 				B6399F70229B97BD00AD6337 /* DataStore */,
 				B6399F6D229B95F600AD6337 /* HealthKit */,
-				B6399F6A229B90F000AD6337 /* GoDefine.entitlements */,
 				3D27865B229B286E004E7A87 /* Models */,
 				3D278658229B22FB004E7A87 /* Views */,
 				3DE3C88B229A6B2000EE4F20 /* ViewControllers */,
@@ -134,6 +192,7 @@
 				3DE3C880229A65BE00EE4F20 /* Assets.xcassets */,
 				3DE3C882229A65BE00EE4F20 /* LaunchScreen.storyboard */,
 				3DE3C885229A65BE00EE4F20 /* Info.plist */,
+				B6399F6A229B90F000AD6337 /* GoDefine.entitlements */,
 				3DE3C87D229A65BC00EE4F20 /* GoDefine.xcdatamodeld */,
 			);
 			path = GoDefine;
@@ -142,32 +201,28 @@
 		3DE3C88B229A6B2000EE4F20 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3DE3C88C229A6C2A00EE4F20 /* TodayViewController.swift */,
-				3DE3C890229A6C6D00EE4F20 /* GoalsViewController.swift */,
-				3DE3C892229A6D0100EE4F20 /* SettingsViewController.swift */,
-				3DE3C896229A7CB900EE4F20 /* MeTableViewController.swift */,
-				3DE3C898229A7D6900EE4F20 /* AwardsCollectionViewController.swift */,
-				3D278653229AF39E004E7A87 /* LoginViewController.swift */,
-				3D278655229B07E9004E7A87 /* AccountFormViewController.swift */,
-				3D27865F229B468D004E7A87 /* GoDefineTabBarController.swift */,
-				3D278661229B5260004E7A87 /* GoDefineNavigationController.swift */,
-				3D278663229B6475004E7A87 /* TodayPageViewController.swift */,
+				3DE3C88C229A6C2A00EE4F20 /* Today+ViewController.swift */,
+				3DE3C890229A6C6D00EE4F20 /* Goals+ViewController.swift */,
+				3DE3C892229A6D0100EE4F20 /* Settings+ViewController.swift */,
+				3DE3C896229A7CB900EE4F20 /* Me+TableViewController.swift */,
+				3DE3C898229A7D6900EE4F20 /* Awards+CollectionViewController.swift */,
+				3D278653229AF39E004E7A87 /* Login+ViewController.swift */,
+				3D278655229B07E9004E7A87 /* AccountForm+ViewController.swift */,
+				3D27865F229B468D004E7A87 /* GoDefine+TabBarController.swift */,
+				3D278661229B5260004E7A87 /* GoDefine+NavigationController.swift */,
+				3D278663229B6475004E7A87 /* Today+PageViewController.swift */,
+				3D4AC4D6229EE36C00EBBF4F /* AwardDetail+ViewController.swift */,
+				3D4AC4D8229F298000EBBF4F /* TodayDetail+CollectionViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B6180B38229EBCF300490FD9 /* Comon */ = {
-			isa = PBXGroup;
-			children = (
-				B6180B39229EBD0C00490FD9 /* Comon.swift */,
-			);
-			path = Comon;
 			sourceTree = "<group>";
 		};
 		B6399F67229B90F000AD6337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D357ACA229F7433008B1CE8 /* fluid_slider.framework */,
 				B6399F68229B90F000AD6337 /* HealthKit.framework */,
+				DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,7 +238,11 @@
 		B6399F70229B97BD00AD6337 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				3D861ACD229FCA5E001F7B4E /* DataStoreService.swift */,
+				3D861ACF229FCA5F001F7B4E /* SteptCountDataStore.swift */,
+				3D861ACE229FCA5E001F7B4E /* WalkingDataStore.swift */,
 				B6399F6E229B96A400AD6337 /* StoringUserProfile.swift */,
+<<<<<<< HEAD
 				B6399F71229B97F500AD6337 /* SteptCountDataStore.swift */,
 				B6180B36229EB2B500490FD9 /* DataStoreService.swift */,
 				B6165557229FCAB600B312E5 /* FlightsClimbedDataStore.swift */,
@@ -191,6 +250,8 @@
 				B6165553229FC89100B312E5 /* ActiveEnergyBurnedDataStore.swift */,
 				B6165555229FCA3400B312E5 /* ExerciseTimeDataStore.swift */,
 				B6165559229FCBA200B312E5 /* StandHourDataStore.swift */,
+=======
+>>>>>>> 568f23607e742434d4823e952d632ced14837ead
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -202,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DE3C888229A65BE00EE4F20 /* Build configuration list for PBXNativeTarget "GoDefine" */;
 			buildPhases = (
+				D998CFC6D95950153F68C358 /* [CP] Check Pods Manifest.lock */,
 				3DE3C86F229A65BC00EE4F20 /* Sources */,
 				3DE3C870229A65BC00EE4F20 /* Frameworks */,
 				3DE3C871229A65BC00EE4F20 /* Resources */,
+				F64896D62034DE2FC2B73963 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,11 +329,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D998CFC6D95950153F68C358 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoDefine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64896D62034DE2FC2B73963 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DE3C86F229A65BC00EE4F20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				B6165558229FCAB600B312E5 /* FlightsClimbedDataStore.swift in Sources */,
 				3DE3C899229A7D6900EE4F20 /* AwardsCollectionViewController.swift in Sources */,
 				3D278660229B468D004E7A87 /* GoDefineTabBarController.swift in Sources */,
@@ -278,10 +383,20 @@
 				3D278662229B5260004E7A87 /* GoDefineNavigationController.swift in Sources */,
 				B6399F72229B97F500AD6337 /* SteptCountDataStore.swift in Sources */,
 				3DE3C88D229A6C2A00EE4F20 /* TodayViewController.swift in Sources */,
+=======
+				3DE3C899229A7D6900EE4F20 /* Awards+CollectionViewController.swift in Sources */,
+				3D278660229B468D004E7A87 /* GoDefine+TabBarController.swift in Sources */,
+				3D278662229B5260004E7A87 /* GoDefine+NavigationController.swift in Sources */,
+				3D4AC4D3229EC11200EBBF4F /* AwardsHeader+CollectionReusableView.swift in Sources */,
+				3DE3C88D229A6C2A00EE4F20 /* Today+ViewController.swift in Sources */,
+				3D861AD2229FCA5F001F7B4E /* SteptCountDataStore.swift in Sources */,
+				3D4AC4D5229EC13600EBBF4F /* Award+CollectionViewCell.swift in Sources */,
+>>>>>>> 568f23607e742434d4823e952d632ced14837ead
 				B6399F6F229B96A400AD6337 /* StoringUserProfile.swift in Sources */,
-				B6180B3C229EC03000490FD9 /* WalkingDataStore.swift in Sources */,
-				3DE3C893229A6D0100EE4F20 /* SettingsViewController.swift in Sources */,
+				3D4AC4D7229EE36C00EBBF4F /* AwardDetail+ViewController.swift in Sources */,
+				3DE3C893229A6D0100EE4F20 /* Settings+ViewController.swift in Sources */,
 				B6399F6C229B934500AD6337 /* HealthKitSetupAssistant.swift in Sources */,
+<<<<<<< HEAD
 				3D278656229B07E9004E7A87 /* AccountFormViewController.swift in Sources */,
 				3DE3C897229A7CB900EE4F20 /* MeTableViewController.swift in Sources */,
 				3D278664229B6475004E7A87 /* TodayPageViewController.swift in Sources */,
@@ -292,10 +407,23 @@
 				B6180B37229EB2B500490FD9 /* DataStoreService.swift in Sources */,
 				3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */,
 				B6165556229FCA3400B312E5 /* ExerciseTimeDataStore.swift in Sources */,
+=======
+				3D278656229B07E9004E7A87 /* AccountForm+ViewController.swift in Sources */,
+				3D861AD8229FCC05001F7B4E /* Comon.swift in Sources */,
+				3DE3C897229A7CB900EE4F20 /* Me+TableViewController.swift in Sources */,
+				3D278664229B6475004E7A87 /* Today+PageViewController.swift in Sources */,
+				3D4AC4DB229F426600EBBF4F /* DetailData+CollectionViewCell.swift in Sources */,
+				3D27865A229B2367004E7A87 /* AccountForm+ScrollView.swift in Sources */,
+				3D278654229AF39E004E7A87 /* Login+ViewController.swift in Sources */,
+				3D861AD1229FCA5F001F7B4E /* WalkingDataStore.swift in Sources */,
+				3D861AD0229FCA5F001F7B4E /* DataStoreService.swift in Sources */,
+				3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */,
+				3D4AC4D9229F298000EBBF4F /* TodayDetail+CollectionViewController.swift in Sources */,
+>>>>>>> 568f23607e742434d4823e952d632ced14837ead
 				B6399F76229B9C7C00AD6337 /* WorkoutSession.swift in Sources */,
 				3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */,
 				B6399F74229B985200AD6337 /* Workout.swift in Sources */,
-				3DE3C891229A6C6D00EE4F20 /* GoalsViewController.swift in Sources */,
+				3DE3C891229A6C6D00EE4F20 /* Goals+ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,17 +567,18 @@
 		};
 		3DE3C889229A65BE00EE4F20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D564755AFB71D54EBDC69D /* Pods-GoDefine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GoDefine/GoDefine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6K68ZW3TZ;
+				DEVELOPMENT_TEAM = S9LL78K9QZ;
 				INFOPLIST_FILE = GoDefine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AnLTNM.GoDefine;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.GoDefine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,17 +587,18 @@
 		};
 		3DE3C88A229A65BE00EE4F20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D742367212670204216633E /* Pods-GoDefine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GoDefine/GoDefine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6K68ZW3TZ;
+				DEVELOPMENT_TEAM = S9LL78K9QZ;
 				INFOPLIST_FILE = GoDefine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AnLTNM.GoDefine;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.GoDefine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
