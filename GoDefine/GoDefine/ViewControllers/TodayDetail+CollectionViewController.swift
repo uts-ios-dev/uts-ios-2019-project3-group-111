@@ -7,13 +7,23 @@
 //
 
 import UIKit
-
+struct abc {
+    var name: String
+    var color: UIColor
+    var currentData: Float
+    
+}
 private let reuseIdentifier = "ActivityDetailCell"
 
 class TodayDetail_CollectionViewController: UICollectionViewController {
+    
+    var abcs: [abc] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        abcs.append(abc(name: <#T##String#>, color: <#T##UIColor#>, currentData: <#T##Float#>))
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let inset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
@@ -52,7 +62,7 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
     
         // Configure the cell
         if let activityDetailCell = cell as? DetailData_CollectionViewCell {
-            print("in cell configure")
+            activityDetailCell.goalLabel.text = abcs[indexPath.row].name
             return activityDetailCell
         }
     

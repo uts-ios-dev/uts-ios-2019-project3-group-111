@@ -9,66 +9,21 @@
 import UIKit
 
 class TodayViewController: UIViewController {
-    
-    @IBOutlet weak var todayStepCount: UILabel!
-    @IBOutlet weak var lastRecentWeekStepCountLbl: UILabel!
-    @IBOutlet weak var todayWalkingDistanceLbl: UILabel!
-    @IBOutlet weak var lastWeekWalkingDistance: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorizeHealthKit()
         // Do any additional setup after loading the view.
-        
     }
     
-    private func loadTodayWalkingDistance(){
-        WalkingDataStore.shared.getTodayWalkingDistance { (distance) in
-            DispatchQueue.main.async {
-                self.todayWalkingDistanceLbl.text = String("\(distance)")
-            }
-        }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    private func loadTodaySteps(){
-        SteptCountDataStore.shared.getTodayStepCount(completion: { (steps) in
-            DispatchQueue.main.async {
-                self.todayStepCount.text = String("\(steps)")
-            }
-        })
-    }
-    
-    private func loadTheLastRecentWeekStepCount(){
-    SteptCountDataStore.shared.getTheLastRecentWeekStepCount(completion: { (steps) in
-                DispatchQueue.main.async {
-                    self.lastRecentWeekStepCountLbl.text = String("\(steps)")
-                }
-            
-        })
-    }
-    
-    private func authorizeHealthKit() {
-        
-        HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
-            
-            guard authorized else {
-                
-                let baseMessage = "HealthKit Authorization Failed"
-                
-                if let error = error {
-                    print("\(baseMessage). Reason: \(error.localizedDescription)")
-                } else {
-                    print(baseMessage)
-                }
-                
-                return
-            }
-            
-            self.loadTodaySteps()
-            self.loadTheLastRecentWeekStepCount()
-            self.loadTodayWalkingDistance()
-            print("HealthKit Successfully Authorized.")
-        }
-        
-    }
+    */
+
 }

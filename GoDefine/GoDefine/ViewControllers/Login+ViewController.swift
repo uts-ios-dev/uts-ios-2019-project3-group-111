@@ -15,9 +15,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authorizeHealthKit()
+        
+        
+        WorkoutDataStore.getMostRecentStep(completion: { (steps) in
+            if steps == 0.0 {
+                print("steps :: \(steps)")
+            }
+            else {
+                DispatchQueue.main.async {
+                    print("steps :: \(steps)")
+                }
+            }
+        })
+        
         // Do any additional setup after loading the view.
     }
-<<<<<<< HEAD:GoDefine/GoDefine/ViewControllers/Login+ViewController.swift
     
     private func authorizeHealthKit() {
         
@@ -35,8 +48,6 @@ class LoginViewController: UIViewController {
         }
     }
 
-=======
->>>>>>> master:GoDefine/GoDefine/ViewControllers/LoginViewController.swift
     /*
     // MARK: - Navigation
 

@@ -23,26 +23,15 @@
 		3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C87D229A65BC00EE4F20 /* GoDefine.xcdatamodeld */; };
 		3DE3C881229A65BE00EE4F20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C880229A65BE00EE4F20 /* Assets.xcassets */; };
 		3DE3C884229A65BE00EE4F20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C882229A65BE00EE4F20 /* LaunchScreen.storyboard */; };
-<<<<<<< HEAD
 		3DE3C88D229A6C2A00EE4F20 /* Today+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C88C229A6C2A00EE4F20 /* Today+ViewController.swift */; };
 		3DE3C891229A6C6D00EE4F20 /* Goals+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C890229A6C6D00EE4F20 /* Goals+ViewController.swift */; };
 		3DE3C893229A6D0100EE4F20 /* Settings+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C892229A6D0100EE4F20 /* Settings+ViewController.swift */; };
 		3DE3C897229A7CB900EE4F20 /* Me+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C896229A7CB900EE4F20 /* Me+TableViewController.swift */; };
 		3DE3C899229A7D6900EE4F20 /* Awards+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C898229A7D6900EE4F20 /* Awards+CollectionViewController.swift */; };
-=======
-		3DE3C88D229A6C2A00EE4F20 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C88C229A6C2A00EE4F20 /* TodayViewController.swift */; };
-		3DE3C891229A6C6D00EE4F20 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C890229A6C6D00EE4F20 /* GoalsViewController.swift */; };
-		3DE3C893229A6D0100EE4F20 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C892229A6D0100EE4F20 /* SettingsViewController.swift */; };
-		3DE3C897229A7CB900EE4F20 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C896229A7CB900EE4F20 /* MeTableViewController.swift */; };
-		3DE3C899229A7D6900EE4F20 /* AwardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C898229A7D6900EE4F20 /* AwardsCollectionViewController.swift */; };
-		B6180B37229EB2B500490FD9 /* DataStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6180B36229EB2B500490FD9 /* DataStoreService.swift */; };
-		B6180B3A229EBD0C00490FD9 /* Comon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6180B39229EBD0C00490FD9 /* Comon.swift */; };
-		B6180B3C229EC03000490FD9 /* WalkingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6180B3B229EC03000490FD9 /* WalkingDataStore.swift */; };
->>>>>>> master
 		B6399F69229B90F000AD6337 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6399F68229B90F000AD6337 /* HealthKit.framework */; };
 		B6399F6C229B934500AD6337 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F6B229B934500AD6337 /* HealthKitSetupAssistant.swift */; };
 		B6399F6F229B96A400AD6337 /* StoringUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F6E229B96A400AD6337 /* StoringUserProfile.swift */; };
-		B6399F72229B97F500AD6337 /* SteptCountDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F71229B97F500AD6337 /* SteptCountDataStore.swift */; };
+		B6399F72229B97F500AD6337 /* WorkoutDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F71229B97F500AD6337 /* WorkoutDataStore.swift */; };
 		B6399F74229B985200AD6337 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F73229B985200AD6337 /* Workout.swift */; };
 		B6399F76229B9C7C00AD6337 /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */; };
 		FCF54383C273F054470619D7 /* Pods_GoDefine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */; };
@@ -69,28 +58,17 @@
 		3DE3C880229A65BE00EE4F20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DE3C883229A65BE00EE4F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE3C885229A65BE00EE4F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		3DE3C88C229A6C2A00EE4F20 /* Today+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Today+ViewController.swift"; sourceTree = "<group>"; };
 		3DE3C890229A6C6D00EE4F20 /* Goals+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goals+ViewController.swift"; sourceTree = "<group>"; };
 		3DE3C892229A6D0100EE4F20 /* Settings+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+ViewController.swift"; sourceTree = "<group>"; };
 		3DE3C896229A7CB900EE4F20 /* Me+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Me+TableViewController.swift"; sourceTree = "<group>"; };
 		3DE3C898229A7D6900EE4F20 /* Awards+CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Awards+CollectionViewController.swift"; sourceTree = "<group>"; };
 		B5D564755AFB71D54EBDC69D /* Pods-GoDefine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDefine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine.debug.xcconfig"; sourceTree = "<group>"; };
-=======
-		3DE3C88C229A6C2A00EE4F20 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		3DE3C890229A6C6D00EE4F20 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
-		3DE3C892229A6D0100EE4F20 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		3DE3C896229A7CB900EE4F20 /* MeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
-		3DE3C898229A7D6900EE4F20 /* AwardsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsCollectionViewController.swift; sourceTree = "<group>"; };
-		B6180B36229EB2B500490FD9 /* DataStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreService.swift; sourceTree = "<group>"; };
-		B6180B39229EBD0C00490FD9 /* Comon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comon.swift; sourceTree = "<group>"; };
-		B6180B3B229EC03000490FD9 /* WalkingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingDataStore.swift; sourceTree = "<group>"; };
->>>>>>> master
 		B6399F68229B90F000AD6337 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B6399F6A229B90F000AD6337 /* GoDefine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoDefine.entitlements; sourceTree = "<group>"; };
 		B6399F6B229B934500AD6337 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		B6399F6E229B96A400AD6337 /* StoringUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoringUserProfile.swift; sourceTree = "<group>"; };
-		B6399F71229B97F500AD6337 /* SteptCountDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteptCountDataStore.swift; sourceTree = "<group>"; };
+		B6399F71229B97F500AD6337 /* WorkoutDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataStore.swift; sourceTree = "<group>"; };
 		B6399F73229B985200AD6337 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = GoDefine/DataStore/Workout.swift; sourceTree = SOURCE_ROOT; };
 		B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutSession.swift; path = GoDefine/DataStore/WorkoutSession.swift; sourceTree = SOURCE_ROOT; };
 		DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDefine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +137,6 @@
 		3DE3C875229A65BC00EE4F20 /* GoDefine */ = {
 			isa = PBXGroup;
 			children = (
-				B6180B38229EBCF300490FD9 /* Comon */,
 				B6399F70229B97BD00AD6337 /* DataStore */,
 				B6399F6D229B95F600AD6337 /* HealthKit */,
 				3D27865B229B286E004E7A87 /* Models */,
@@ -195,14 +172,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		B6180B38229EBCF300490FD9 /* Comon */ = {
-			isa = PBXGroup;
-			children = (
-				B6180B39229EBD0C00490FD9 /* Comon.swift */,
-			);
-			path = Comon;
-			sourceTree = "<group>";
-		};
 		B6399F67229B90F000AD6337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,9 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				B6399F6E229B96A400AD6337 /* StoringUserProfile.swift */,
-				B6399F71229B97F500AD6337 /* SteptCountDataStore.swift */,
-				B6180B36229EB2B500490FD9 /* DataStoreService.swift */,
-				B6180B3B229EC03000490FD9 /* WalkingDataStore.swift */,
+				B6399F71229B97F500AD6337 /* WorkoutDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -243,7 +210,7 @@
 				3DE3C86F229A65BC00EE4F20 /* Sources */,
 				3DE3C870229A65BC00EE4F20 /* Frameworks */,
 				3DE3C871229A65BC00EE4F20 /* Resources */,
-				D27FFCA201EB6C125DF41F18 /* [CP] Embed Pods Frameworks */,
+				F64896D62034DE2FC2B73963 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,7 +273,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D27FFCA201EB6C125DF41F18 /* [CP] Embed Pods Frameworks */ = {
+		D998CFC6D95950153F68C358 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoDefine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64896D62034DE2FC2B73963 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,24 +311,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D998CFC6D95950153F68C358 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GoDefine-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -351,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				3DE3C899229A7D6900EE4F20 /* Awards+CollectionViewController.swift in Sources */,
 				3D278660229B468D004E7A87 /* GoDefine+TabBarController.swift in Sources */,
 				3D278662229B5260004E7A87 /* GoDefine+NavigationController.swift in Sources */,
@@ -369,24 +335,6 @@
 				3D4AC4DB229F426600EBBF4F /* DetailData+CollectionViewCell.swift in Sources */,
 				3D27865A229B2367004E7A87 /* AccountForm+ScrollView.swift in Sources */,
 				3D278654229AF39E004E7A87 /* Login+ViewController.swift in Sources */,
-=======
-				3DE3C899229A7D6900EE4F20 /* AwardsCollectionViewController.swift in Sources */,
-				3D278660229B468D004E7A87 /* GoDefineTabBarController.swift in Sources */,
-				B6180B3A229EBD0C00490FD9 /* Comon.swift in Sources */,
-				3D278662229B5260004E7A87 /* GoDefineNavigationController.swift in Sources */,
-				B6399F72229B97F500AD6337 /* SteptCountDataStore.swift in Sources */,
-				3DE3C88D229A6C2A00EE4F20 /* TodayViewController.swift in Sources */,
-				B6399F6F229B96A400AD6337 /* StoringUserProfile.swift in Sources */,
-				B6180B3C229EC03000490FD9 /* WalkingDataStore.swift in Sources */,
-				3DE3C893229A6D0100EE4F20 /* SettingsViewController.swift in Sources */,
-				B6399F6C229B934500AD6337 /* HealthKitSetupAssistant.swift in Sources */,
-				3D278656229B07E9004E7A87 /* AccountFormViewController.swift in Sources */,
-				3DE3C897229A7CB900EE4F20 /* MeTableViewController.swift in Sources */,
-				3D278664229B6475004E7A87 /* TodayPageViewController.swift in Sources */,
-				3D27865A229B2367004E7A87 /* AccountFormScrollView.swift in Sources */,
-				3D278654229AF39E004E7A87 /* LoginViewController.swift in Sources */,
-				B6180B37229EB2B500490FD9 /* DataStoreService.swift in Sources */,
->>>>>>> master
 				3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */,
 				3D4AC4D9229F298000EBBF4F /* TodayDetail+CollectionViewController.swift in Sources */,
 				B6399F76229B9C7C00AD6337 /* WorkoutSession.swift in Sources */,

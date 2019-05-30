@@ -10,6 +10,7 @@ import UIKit
 
 class DetailData_CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var goalLabel: UILabel!
     override func draw(_ rect: CGRect) {
         var bgRect = rect
         bgRect.origin.y += 20

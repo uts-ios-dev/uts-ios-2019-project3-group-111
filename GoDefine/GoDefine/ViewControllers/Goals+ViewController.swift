@@ -35,11 +35,9 @@ class GoalsViewController: UIViewController {
         slider.valueViewColor = .white
         slider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
-            print(self?.slider.fraction as Any)
         }
         slider.didEndTracking = { [weak self] _ in
             self?.setLabelHidden(false, animated: true)
-            self?.slider.fraction = 0.2-0
         }
     }
     
