@@ -10,6 +10,7 @@ import UIKit
 
 class TodayViewController: UIViewController {
     
+//    @IBOutlet weak var todayStepCount: UILabel!
     @IBOutlet weak var todayStepCount: UILabel!
     @IBOutlet weak var lastRecentWeekStepCountLbl: UILabel!
     @IBOutlet weak var todayWalkingDistanceLbl: UILabel!
@@ -39,7 +40,7 @@ class TodayViewController: UIViewController {
     }
     
     private func loadTodaySteps(){
-        SteptCountDataStore.shared.getTodayStepCount(completion: { (steps) in
+        ActiveEnergyDataStore.shared.getTodayActiveEnergy(completion: { (steps) in
             DispatchQueue.main.async {
                 self.todayStepCount.text = String("\(steps)")
             }
@@ -73,9 +74,9 @@ class TodayViewController: UIViewController {
             }
             
             self.loadTodaySteps()
-            self.loadTheLastRecentWeekStepCount()
-            self.loadTodayWalkingDistance()
-            self.loadTheLastRecentWeekWalkingDistance()
+//            self.loadTheLastRecentWeekStepCount()
+//            self.loadTodayWalkingDistance()
+//            self.loadTheLastRecentWeekWalkingDistance()
             print("HealthKit Successfully Authorized.")
         }
         
