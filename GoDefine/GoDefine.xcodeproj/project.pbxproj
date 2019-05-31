@@ -42,6 +42,7 @@
 		B6633D22229FD7AC0086AD58 /* SteptCountDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6633D21229FD7AC0086AD58 /* SteptCountDataStore.swift */; };
 		B6AAAAC7229FD2D700D4C21A /* WorkoutDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAAAC4229FD2D700D4C21A /* WorkoutDataStore.swift */; };
 		B6AAAAC8229FD2D700D4C21A /* StoringUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAAAC5229FD2D700D4C21A /* StoringUserProfile.swift */; };
+		F61794C922A0BF11003B041E /* Splash+ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61794C822A0BF11003B041E /* Splash+ContainerViewController.swift */; };
 		FCF54383C273F054470619D7 /* Pods_GoDefine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		B6AAAAC4229FD2D700D4C21A /* WorkoutDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDataStore.swift; sourceTree = "<group>"; };
 		B6AAAAC5229FD2D700D4C21A /* StoringUserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoringUserProfile.swift; sourceTree = "<group>"; };
 		DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDefine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61794C822A0BF11003B041E /* Splash+ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Splash+ContainerViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				3D278663229B6475004E7A87 /* Today+PageViewController.swift */,
 				3D4AC4D6229EE36C00EBBF4F /* AwardDetail+ViewController.swift */,
 				3D4AC4D8229F298000EBBF4F /* TodayDetail+CollectionViewController.swift */,
+				F61794C822A0BF11003B041E /* Splash+ContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -341,18 +344,22 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -393,6 +400,7 @@
 				B6633D1F229FD5F40086AD58 /* ExerciseTimeDataStore.swift in Sources */,
 				3DE3C891229A6C6D00EE4F20 /* Goals+ViewController.swift in Sources */,
 				B6633D22229FD7AC0086AD58 /* SteptCountDataStore.swift in Sources */,
+				F61794C922A0BF11003B041E /* Splash+ContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

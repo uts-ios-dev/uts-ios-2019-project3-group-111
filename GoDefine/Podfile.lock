@@ -1,21 +1,31 @@
 PODS:
   - fluid-slider (1.1.0):
     - pop
+  - Motion (3.1.0):
+    - Motion/Core (= 3.1.0)
+  - Motion/Core (3.1.0)
   - pop (1.0.12)
+  - SnapKit (5.0.0)
 
 DEPENDENCIES:
   - fluid-slider
+  - Motion (~> 3.1.0)
   - pop (~> 1.0)
+  - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - fluid-slider
+    - Motion
     - pop
+    - SnapKit
 
 SPEC CHECKSUMS:
   fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
+  Motion: adfaf0a123322dfde099f49cf6cbe3abfa8f3899
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: ce77dfcbef5bf6430cc2cc6b178800c4fcbc0d65
+PODFILE CHECKSUM: 06d2e9ff4c2dd451f14ed55ad999bf1b9ea7014b
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.1
