@@ -7,23 +7,39 @@
 //
 
 import UIKit
-struct abc {
+
+struct ActivityData {
     var name: String
-    var color: UIColor
-    var currentData: Float
-    
+    var bgColor: UIColor
+    var fgColor: UIColor
+    var todayData: Float
+    var weeklyData: Float
+    var monthlyData: Float
+    var unit: String
 }
+
 private let reuseIdentifier = "ActivityDetailCell"
 
 class TodayDetail_CollectionViewController: UICollectionViewController {
     
-    var abcs: [abc] = []
-    
+    var activityDataList: [ActivityData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        abcs.append(abc(name: <#T##String#>, color: <#T##UIColor#>, currentData: <#T##Float#>))
+        // prepare the activity data
+        // template ----------------------------------------------------------------------
+        activityDataList.append(
+            ActivityData(
+                name: "Flights Climbed",
+                bgColor: UIColor(displayP3Red: 181/255, green: 0, blue: 1, alpha: 1),
+                fgColor: UIColor(displayP3Red: 244/255, green: 217/255, blue: 1, alpha: 1),
+                todayData: 5.0,
+                weeklyData: 4.0,
+                monthlyData: 3.3,
+                unit: "floors")
+        )
+        // template end ------------------------------------------------------------------
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let inset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
@@ -62,7 +78,7 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
     
         // Configure the cell
         if let activityDetailCell = cell as? DetailData_CollectionViewCell {
-            activityDetailCell.goalLabel.text = abcs[indexPath.row].name
+            activityDetailCell.activityData = activityDataList[indexPath.row]
             return activityDetailCell
         }
     

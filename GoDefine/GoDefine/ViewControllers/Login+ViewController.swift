@@ -9,6 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    let user = User()
 
     override var prefersStatusBarHidden: Bool { return true }
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { return .fade }
@@ -16,6 +18,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("\(String(describing: user.name))")
+        if let _ = user.name {
+            performSegue(withIdentifier: "EnterHomeDirect", sender: nil)
+        }
     }
     /*
     // MARK: - Navigation

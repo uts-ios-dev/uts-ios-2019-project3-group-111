@@ -143,13 +143,17 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Motion/Motion.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RLBAlertsPickers/RLBAlertsPickers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Motion/Motion.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RLBAlertsPickers/RLBAlertsPickers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"

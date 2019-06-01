@@ -19,6 +19,7 @@
 		3D4AC4D9229F298000EBBF4F /* TodayDetail+CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4D8229F298000EBBF4F /* TodayDetail+CollectionViewController.swift */; };
 		3D4AC4DB229F426600EBBF4F /* DetailData+CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4DA229F426600EBBF4F /* DetailData+CollectionViewCell.swift */; };
 		3D861AD8229FCC05001F7B4E /* Comon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D861AD7229FCC04001F7B4E /* Comon.swift */; };
+		3DC692F722A1D3A00046D841 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC692F622A1D3A00046D841 /* User.swift */; };
 		3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */; };
 		3DE3C87C229A65BC00EE4F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C87A229A65BC00EE4F20 /* Main.storyboard */; };
 		3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C87D229A65BC00EE4F20 /* GoDefine.xcdatamodeld */; };
@@ -63,6 +64,7 @@
 		3D861ACD229FCA5E001F7B4E /* DataStoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreService.swift; sourceTree = "<group>"; };
 		3D861ACE229FCA5E001F7B4E /* WalkingDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingDataStore.swift; sourceTree = "<group>"; };
 		3D861AD7229FCC04001F7B4E /* Comon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comon.swift; sourceTree = "<group>"; };
+		3DC692F622A1D3A00046D841 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3DE3C873229A65BC00EE4F20 /* GoDefine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDefine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE3C87B229A65BC00EE4F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,8 +87,8 @@
 		B6399F68229B90F000AD6337 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B6399F6A229B90F000AD6337 /* GoDefine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoDefine.entitlements; sourceTree = "<group>"; };
 		B6399F6B229B934500AD6337 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
-		B6399F73229B985200AD6337 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = GoDefine/DataStore/Workout.swift; sourceTree = SOURCE_ROOT; };
-		B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutSession.swift; path = GoDefine/DataStore/WorkoutSession.swift; sourceTree = SOURCE_ROOT; };
+		B6399F73229B985200AD6337 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = GoDefine/Models/Workout.swift; sourceTree = SOURCE_ROOT; };
+		B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutSession.swift; path = GoDefine/Models/WorkoutSession.swift; sourceTree = SOURCE_ROOT; };
 		B6633D21229FD7AC0086AD58 /* SteptCountDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteptCountDataStore.swift; sourceTree = "<group>"; };
 		B6AAAAC4229FD2D700D4C21A /* WorkoutDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDataStore.swift; sourceTree = "<group>"; };
 		B6AAAAC5229FD2D700D4C21A /* StoringUserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoringUserProfile.swift; sourceTree = "<group>"; };
@@ -127,21 +129,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		3D27865B229B286E004E7A87 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B6399F73229B985200AD6337 /* Workout.swift */,
-				B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		3D861AD9229FCC0F001F7B4E /* Comon */ = {
 			isa = PBXGroup;
 			children = (
 				3D861AD7229FCC04001F7B4E /* Comon.swift */,
 			);
 			path = Comon;
+			sourceTree = "<group>";
+		};
+		3DC692F522A1D3590046D841 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6399F73229B985200AD6337 /* Workout.swift */,
+				B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */,
+				3DC692F622A1D3A00046D841 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3DE3C86A229A65BC00EE4F20 = {
@@ -169,7 +172,7 @@
 				3D861AD9229FCC0F001F7B4E /* Comon */,
 				B6399F70229B97BD00AD6337 /* DataStore */,
 				B6399F6D229B95F600AD6337 /* HealthKit */,
-				3D27865B229B286E004E7A87 /* Models */,
+				3DC692F522A1D3590046D841 /* Models */,
 				3D278658229B22FB004E7A87 /* Views */,
 				3DE3C88B229A6B2000EE4F20 /* ViewControllers */,
 				3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */,
@@ -345,14 +348,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoDefine/Pods-GoDefine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/RLBAlertsPickers/RLBAlertsPickers.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RLBAlertsPickers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -401,6 +408,7 @@
 				3DE3C891229A6C6D00EE4F20 /* Goals+ViewController.swift in Sources */,
 				B6633D22229FD7AC0086AD58 /* SteptCountDataStore.swift in Sources */,
 				F61794C922A0BF11003B041E /* Splash+ContainerViewController.swift in Sources */,
+				3DC692F722A1D3A00046D841 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,13 +557,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GoDefine/GoDefine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6K68ZW3TZ;
+				DEVELOPMENT_TEAM = S9LL78K9QZ;
 				INFOPLIST_FILE = GoDefine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TranNhutLe.GoDefine;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.GoDefine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -569,13 +577,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GoDefine/GoDefine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6K68ZW3TZ;
+				DEVELOPMENT_TEAM = S9LL78K9QZ;
 				INFOPLIST_FILE = GoDefine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TranNhutLe.GoDefine;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.GoDefine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
