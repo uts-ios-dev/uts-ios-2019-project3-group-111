@@ -42,7 +42,6 @@
 		B6633D1F229FD5F40086AD58 /* ExerciseTimeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6165555229FCA3400B312E5 /* ExerciseTimeDataStore.swift */; };
 		B6633D20229FD5F70086AD58 /* StandHourDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6165559229FCBA200B312E5 /* StandHourDataStore.swift */; };
 		B6633D22229FD7AC0086AD58 /* SteptCountDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6633D21229FD7AC0086AD58 /* SteptCountDataStore.swift */; };
-		B6AAAAC7229FD2D700D4C21A /* WorkoutDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAAAC4229FD2D700D4C21A /* WorkoutDataStore.swift */; };
 		B6AAAAC8229FD2D700D4C21A /* StoringUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AAAAC5229FD2D700D4C21A /* StoringUserProfile.swift */; };
 		F61794C922A0BF11003B041E /* Splash+ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61794C822A0BF11003B041E /* Splash+ContainerViewController.swift */; };
 		FCF54383C273F054470619D7 /* Pods_GoDefine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */; };
@@ -92,7 +91,6 @@
 		B6399F73229B985200AD6337 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = GoDefine/Models/Workout.swift; sourceTree = SOURCE_ROOT; };
 		B6399F75229B9C7C00AD6337 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutSession.swift; path = GoDefine/Models/WorkoutSession.swift; sourceTree = SOURCE_ROOT; };
 		B6633D21229FD7AC0086AD58 /* SteptCountDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteptCountDataStore.swift; sourceTree = "<group>"; };
-		B6AAAAC4229FD2D700D4C21A /* WorkoutDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDataStore.swift; sourceTree = "<group>"; };
 		B6AAAAC5229FD2D700D4C21A /* StoringUserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoringUserProfile.swift; sourceTree = "<group>"; };
 		DE4B4FCF3180599549BDB684 /* Pods_GoDefine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDefine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61794C822A0BF11003B041E /* Splash+ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Splash+ContainerViewController.swift"; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				B6AAAAC5229FD2D700D4C21A /* StoringUserProfile.swift */,
-				B6AAAAC4229FD2D700D4C21A /* WorkoutDataStore.swift */,
 				B6180B36229EB2B500490FD9 /* DataStoreService.swift */,
 				B6633D21229FD7AC0086AD58 /* SteptCountDataStore.swift */,
 				B6165557229FCAB600B312E5 /* FlightsClimbedDataStore.swift */,
@@ -409,7 +406,6 @@
 				3D4AC4D9229F298000EBBF4F /* TodayDetail+CollectionViewController.swift in Sources */,
 				B6399F76229B9C7C00AD6337 /* WorkoutSession.swift in Sources */,
 				3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */,
-				B6AAAAC7229FD2D700D4C21A /* WorkoutDataStore.swift in Sources */,
 				B6399F74229B985200AD6337 /* Workout.swift in Sources */,
 				3DC692F922A399FD0046D841 /* BubbleView.swift in Sources */,
 				B6633D1F229FD5F40086AD58 /* ExerciseTimeDataStore.swift in Sources */,

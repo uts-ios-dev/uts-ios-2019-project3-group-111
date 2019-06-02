@@ -41,7 +41,7 @@ class GoalsViewController: UIViewController {
         totalSlider.fraction = 0.5
         totalSlider.shadowOffset = CGSize(width: 0, height: 10)
         totalSlider.shadowBlur = 5
-        totalSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
+//        totalSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         totalSlider.contentViewColor = UIColor(red: 78/255.0, green: 77/255.0, blue: 224/255.0, alpha: 1)
         totalSlider.valueViewColor = .white
         totalSlider.didBeginTracking = { [weak self] _ in
@@ -65,7 +65,7 @@ class GoalsViewController: UIViewController {
         workOutSlider.fraction = 0.5
         workOutSlider.shadowOffset = CGSize(width: 0, height: 10)
         workOutSlider.shadowBlur = 5
-        workOutSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
+//        workOutSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         workOutSlider.contentViewColor = UIColor(red: 0/255.0, green: 185/255.0, blue: 2/255.0, alpha: 1)
         workOutSlider.valueViewColor = .white
         workOutSlider.didBeginTracking = { [weak self] _ in
@@ -89,7 +89,7 @@ class GoalsViewController: UIViewController {
         standingSlider.fraction = 0.5
         standingSlider.shadowOffset = CGSize(width: 0, height: 10)
         standingSlider.shadowBlur = 5
-        standingSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
+//        standingSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         standingSlider.contentViewColor = UIColor(red: 137/255.0, green: 95/255.0, blue: 255/255.0, alpha: 1)
         standingSlider.valueViewColor = .white
         standingSlider.didBeginTracking = { [weak self] _ in
@@ -113,7 +113,7 @@ class GoalsViewController: UIViewController {
         walkingSlider.fraction = 0.5
         walkingSlider.shadowOffset = CGSize(width: 0, height: 10)
         walkingSlider.shadowBlur = 5
-        walkingSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
+//        walkingSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         walkingSlider.contentViewColor = UIColor(red: 53/255.0, green: 172/255.0, blue: 255/255.0, alpha: 1)
         walkingSlider.valueViewColor = .white
         walkingSlider.didBeginTracking = { [weak self] _ in
@@ -137,7 +137,7 @@ class GoalsViewController: UIViewController {
         climbingSlider.fraction = 0.5
         climbingSlider.shadowOffset = CGSize(width: 0, height: 10)
         climbingSlider.shadowBlur = 5
-        climbingSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
+//        climbingSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         climbingSlider.contentViewColor = UIColor(red: 181/255.0, green: 0/255.0, blue: 255/255.0, alpha: 1)
         climbingSlider.valueViewColor = .white
         climbingSlider.didBeginTracking = { [weak self] _ in
@@ -161,7 +161,7 @@ class GoalsViewController: UIViewController {
         stepSlider.fraction = 0.5
         stepSlider.shadowOffset = CGSize(width: 0, height: 10)
         stepSlider.shadowBlur = 5
-        stepSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
+//        stepSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         stepSlider.contentViewColor = UIColor(red: 255/255.0, green: 203/255.0, blue: 0/255.0, alpha: 1)
         stepSlider.valueViewColor = .white
         stepSlider.didBeginTracking = { [weak self] _ in

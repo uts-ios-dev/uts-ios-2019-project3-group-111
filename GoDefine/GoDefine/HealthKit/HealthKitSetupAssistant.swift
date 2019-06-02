@@ -23,7 +23,7 @@ class HealthKitSetupAssistant {
             completion(false, HealthkitSetupError.notAvailableOnDevice)
             return
         }
-        let objectTypes: Set<HKObjectType> = [
+        let _: Set<HKObjectType> = [
             HKObjectType.activitySummaryType()
         ]
         
