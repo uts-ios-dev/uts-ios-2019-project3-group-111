@@ -142,7 +142,7 @@ class AccountFormViewController: UIViewController {
         sender.text = "\(self.bfp) %"
         self.bfp = self.bfp / 100
         bfpPicker.addPickerView(values: pickerViewValues, initialSelection: pickerViewSelectedValue) { (vc, picker, index, bfps) in
-            self.bfp = Float(Int(bfps[index.column][index.row])!)
+            self.bfp = Float(bfps[index.column][index.row]) ?? 30.0
             sender.text = "\(self.bfp) %"
             self.bfp = self.bfp / 100
         }

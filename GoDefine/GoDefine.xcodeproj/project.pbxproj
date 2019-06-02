@@ -20,6 +20,7 @@
 		3D4AC4DB229F426600EBBF4F /* DetailData+CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AC4DA229F426600EBBF4F /* DetailData+CollectionViewCell.swift */; };
 		3D861AD8229FCC05001F7B4E /* Comon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D861AD7229FCC04001F7B4E /* Comon.swift */; };
 		3DC692F722A1D3A00046D841 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC692F622A1D3A00046D841 /* User.swift */; };
+		3DC692F922A399FD0046D841 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC692F822A399FD0046D841 /* BubbleView.swift */; };
 		3DE3C877229A65BC00EE4F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */; };
 		3DE3C87C229A65BC00EE4F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3C87A229A65BC00EE4F20 /* Main.storyboard */; };
 		3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3C87D229A65BC00EE4F20 /* GoDefine.xcdatamodeld */; };
@@ -65,6 +66,7 @@
 		3D861ACE229FCA5E001F7B4E /* WalkingDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingDataStore.swift; sourceTree = "<group>"; };
 		3D861AD7229FCC04001F7B4E /* Comon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comon.swift; sourceTree = "<group>"; };
 		3DC692F622A1D3A00046D841 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3DC692F822A399FD0046D841 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		3DE3C873229A65BC00EE4F20 /* GoDefine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDefine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE3C876229A65BC00EE4F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE3C87B229A65BC00EE4F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				3D4AC4D2229EC11200EBBF4F /* AwardsHeader+CollectionReusableView.swift */,
 				3D4AC4D4229EC13600EBBF4F /* Award+CollectionViewCell.swift */,
 				3D4AC4DA229F426600EBBF4F /* DetailData+CollectionViewCell.swift */,
+				3DC692F822A399FD0046D841 /* BubbleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				3DE3C87F229A65BC00EE4F20 /* GoDefine.xcdatamodeld in Sources */,
 				B6AAAAC7229FD2D700D4C21A /* WorkoutDataStore.swift in Sources */,
 				B6399F74229B985200AD6337 /* Workout.swift in Sources */,
+				3DC692F922A399FD0046D841 /* BubbleView.swift in Sources */,
 				B6633D1F229FD5F40086AD58 /* ExerciseTimeDataStore.swift in Sources */,
 				3DE3C891229A6C6D00EE4F20 /* Goals+ViewController.swift in Sources */,
 				B6633D22229FD7AC0086AD58 /* SteptCountDataStore.swift in Sources */,

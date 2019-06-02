@@ -19,7 +19,10 @@ class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         authorizeHealthKit()
+        
         // Do any additional setup after loading the view.
+        let bubbleView = BubbleView(frame: CGRect(x: view.frame.width/2-125, y: view.frame.height/2-125, width: 250, height: 250))
+        view.addSubview(bubbleView)
         
     }
     

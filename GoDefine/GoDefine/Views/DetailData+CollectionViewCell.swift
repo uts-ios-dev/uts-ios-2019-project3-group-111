@@ -43,7 +43,7 @@ class DetailData_CollectionViewCell: UICollectionViewCell {
         bgColor.setFill()
         bg.fill()
         
-        let stateSymbolRect = CGRect(x: rect.origin.x+rect.size.width*0.6, y: rect.origin.y, width: 50, height: 50)
+        let stateSymbolRect = CGRect(x: rect.origin.x+rect.size.width*0.55, y: rect.origin.y, width: 50, height: 50)
 //        let stateSymbol = UIBezierPath(ovalIn: stateSymbolRect)
 //        stateSymbol.fill()
         let stateSymbolView = UIView(frame: stateSymbolRect)
@@ -57,7 +57,7 @@ class DetailData_CollectionViewCell: UICollectionViewCell {
         stateSymbolView.addSubview(stateSymbolImageView)
         self.addSubview(stateSymbolView)
         
-        let goalBgRect = CGRect(x: rect.origin.x+3, y: rect.origin.y+rect.size.height-47.0, width: bgRect.size.width*0.65, height: 44.0)
+        let goalBgRect = CGRect(x: rect.origin.x+3, y: rect.origin.y+rect.size.height-47.0, width: bgRect.size.width*0.625, height: 44.0)
 //        let goalBgColor = UIColor(displayP3Red: 244/255, green: 217/255, blue: 1, alpha: 1)
         let goalBgColor = activityData.fgColor
         let goalBg = UIBezierPath(roundedRect: goalBgRect, cornerRadius: 8.0)
