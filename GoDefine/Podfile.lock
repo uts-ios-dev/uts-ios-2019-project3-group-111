@@ -8,6 +8,7 @@ PODS:
   - pop (1.0.12)
   - RLBAlertsPickers (1.1.2)
   - SnapKit (5.0.0)
+  - SwiftyOnboard (1.3.8)
 
 DEPENDENCIES:
   - Eureka
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - pop (~> 1.0)
   - RLBAlertsPickers
   - SnapKit
+  - SwiftyOnboard
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -25,6 +27,7 @@ SPEC REPOS:
     - pop
     - RLBAlertsPickers
     - SnapKit
+    - SwiftyOnboard
 
 SPEC CHECKSUMS:
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
@@ -33,7 +36,8 @@ SPEC CHECKSUMS:
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RLBAlertsPickers: 2548943b0cb16620904cbd926a645362d1b43963
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
 
-PODFILE CHECKSUM: 2adb409cb453316dc966b9ad4ae9358b17847abe
+PODFILE CHECKSUM: 0e81b92a658133f07feb407a779dc5cf1cc05181
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.1
