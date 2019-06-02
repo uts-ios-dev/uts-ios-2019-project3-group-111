@@ -15,51 +15,39 @@ class WorkoutDataStore {
         
     }
     
-    class func getMostRecentStep(completion: @escaping (_ stepRetrieved: Double) -> Void) {
-        let healthStore = HKHealthStore()
-
-        let startDate = Date().addingTimeInterval(-3600 * 24 * 7)
+    func getTodayStepCount(completion: @escaping (_ stepRetrieved: Double) -> Void) {
+        
+        //        let startDate = Date().addingTimeInterval(-3600 * 24 * 7)
+        let cal = Calendar(identifier: Calendar.Identifier.gregorian)
+        let startDate = cal.startOfDay(for: Date())
+        let endDate = Date()
+        HealthStoreServices.shared.getDatatBetweenDays(identifier: .appleExerciseTime, unit: HKUnit.count(), startDate: startDate, endDate: endDate, completion: {
+            (steps) in completion(steps)
+        }
+        )
+    }
+    
+    func getTheLastRecentWeekStepCount(completion: @escaping (_ stepRetrieve: Double) -> Void){
+        
+        // Get the last 7 day from today
+        let startDate = Date().addingTimeInterval(TimeInterval(-1 * DateTime.hourInSecond.rawValue * DateTime.hourInDay.rawValue * DateTime.numDayInWeek.rawValue))
         let endDate = Date()
         
-        let predicate = HKQuery.predicateForSamples(
-            withStart: startDate,
-            end: endDate,
-            options: [.strictStartDate, .strictEndDate]
-        )
-        
-        // interval is 1 day
-        var interval = DateComponents()
-        interval.day = 1
-        
-        // start from midnight
-        let calendar = Calendar.current
-        let anchorDate = calendar.date(bySettingHour: 12, minute: 0, second: 0, of: Date())
-        
-        let query = HKStatisticsCollectionQuery(
-            quantityType: HKSampleType.quantityType(forIdentifier: .stepCount)!,
-            quantitySamplePredicate: predicate,
-            options: .cumulativeSum,
-            anchorDate: anchorDate!,
-            intervalComponents: interval
-        )
-        
-        query.initialResultsHandler = { query, results, error in
-            guard let results = results else {
-                return
-            }
-            
-            results.enumerateStatistics(
-                from: startDate,
-                to: endDate,
-                with: { (result, stop) in
-                    let totalStepForADay = result.sumQuantity()?.doubleValue(for: HKUnit.count()) ?? 0
-                    print(totalStepForADay)
-            }
-            )
+        HealthStoreServices.shared.getDatatBetweenDays(identifier: .stepCount, unit: HKUnit.count(), startDate: startDate, endDate: endDate, completion: {
+            (steps) in completion(steps)
         }
+        )
+    }
+    
+    func getTheLastRecentMonth(completion: @escaping (_ stepRetrieve: Double) -> Void){
         
-        healthStore.execute(query)
-        
+        // Get the last 7 day from today
+        let startDate = Date().addingTimeInterval(TimeInterval(-1 * DateTime.hourInSecond.rawValue * DateTime.hourInDay.rawValue * DateTime.numDaysInMonth.rawValue))
+        let endDate = Date()
+        HealthStoreServices.shared.getDatatBetweenDays(identifier: .stepCount, unit: HKUnit.count(), startDate: startDate, endDate: endDate, completion: {
+            (steps) in completion(steps)
+        }
+        )
     }
     
     

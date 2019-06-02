@@ -40,8 +40,4 @@ class WalkingDataStore{
         
         HealthStoreServices.shared.getDatatBetweenDays(identifier: .distanceWalkingRunning, unit: HKUnit.meter(), startDate: startDate, endDate: endDate, completion: completion)
     }
-    
-    private func toKilometer(meter: Double) -> Double{
-        return meter / 1000.0
-    }
 }

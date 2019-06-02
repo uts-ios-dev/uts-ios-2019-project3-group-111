@@ -18,67 +18,61 @@ class TodayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorizeHealthKit()
+//        authorizeHealthKit()
         // Do any additional setup after loading the view.
         
     }
     
-    private func loadTodayWalkingDistance(){
-        WalkingDataStore.shared.getTodayWalkingDistance { (distance) in
-            DispatchQueue.main.async {
-                self.todayWalkingDistanceLbl.text = String("\(distance)")
-            }
-        }
-    }
-    
-    private func loadTheLastRecentWeekWalkingDistance(){
-        WalkingDataStore.shared.getTheLastRecentWeekWalkingDistance(completion: { (steps) in
-            DispatchQueue.main.async {
-                self.lastWeekWalkingDistance.text = String("\(steps)")
-            }
-        })
-    }
-    
-    private func loadTodaySteps(){
-        ActiveEnergyDataStore.shared.getTodayActiveEnergy(completion: { (steps) in
-            DispatchQueue.main.async {
-                self.todayStepCount.text = String("\(steps)")
-            }
-        })
-    }
-    
-    private func loadTheLastRecentWeekStepCount(){
-    SteptCountDataStore.shared.getTheLastRecentWeekStepCount(completion: { (steps) in
-                DispatchQueue.main.async {
-                    self.lastRecentWeekStepCountLbl.text = String("\(steps)")
-                }
-            
-        })
-    }
-    
+//    private func loadTodayWalkingDistance(){
+//        WalkingDataStore.shared.getTodayWalkingDistance { (distance) in
+//            DispatchQueue.main.async {
+//                self.todayWalkingDistanceLbl.text = String("\(distance)")
+//            }
+//        }
+//    }
+//
+//    private func loadTheLastRecentWeekWalkingDistance(){
+//        WalkingDataStore.shared.getTheLastRecentWeekWalkingDistance(completion: { (steps) in
+//            DispatchQueue.main.async {
+//                self.lastWeekWalkingDistance.text = String("\(steps)")
+//            }
+//        })
+//    }
+//
+//    private func loadTodaySteps(){
+//        ActiveEnergyDataStore.shared.getTodayActiveEnergy(completion: { (steps) in
+//            DispatchQueue.main.async {
+//                self.todayStepCount.text = String("\(steps)")
+//            }
+//        })
+//    }
+//
+//    private func loadTheLastRecentWeekStepCount(){
+//    SteptCountDataStore.shared.getTheLastRecentWeekStepCount(completion: { (steps) in
+//                DispatchQueue.main.async {
+//                    self.lastRecentWeekStepCountLbl.text = String("\(steps)")
+//                }
+//
+//        })
+//    }
+//
     private func authorizeHealthKit() {
-        
+
         HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
-            
+
             guard authorized else {
-                
+
                 let baseMessage = "HealthKit Authorization Failed"
-                
+
                 if let error = error {
                     print("\(baseMessage). Reason: \(error.localizedDescription)")
                 } else {
                     print(baseMessage)
                 }
-                
                 return
             }
-            
-            self.loadTodaySteps()
-//            self.loadTheLastRecentWeekStepCount()
-//            self.loadTodayWalkingDistance()
-//            self.loadTheLastRecentWeekWalkingDistance()
             print("HealthKit Successfully Authorized.")
         }
-        
+
     }
 }
