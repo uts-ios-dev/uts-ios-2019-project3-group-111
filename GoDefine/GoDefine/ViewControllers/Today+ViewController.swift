@@ -18,7 +18,7 @@ class TodayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        authorizeHealthKit()
+        authorizeHealthKit()
         // Do any additional setup after loading the view.
         
     }

@@ -23,6 +23,9 @@ class HealthKitSetupAssistant {
             completion(false, HealthkitSetupError.notAvailableOnDevice)
             return
         }
+        let objectTypes: Set<HKObjectType> = [
+            HKObjectType.activitySummaryType()
+        ]
         
         //2. Prepare the data types that will interact with HealthKit
         guard   let dateOfBirth = HKObjectType.characteristicType(forIdentifier: .dateOfBirth),
@@ -36,8 +39,9 @@ class HealthKitSetupAssistant {
             let appleExerciseTime = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.appleExerciseTime),
             let flightsClimbed = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.flightsClimbed),
             let appleStandHour = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.appleStandHour),
-            let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)
-            
+            let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
+            let appleExcerise = HKObjectType.quantityType(forIdentifier: .appleExerciseTime)
+
             else {
                 
                 completion(false, HealthkitSetupError.dataTypeNotAvailable)
@@ -60,7 +64,10 @@ class HealthKitSetupAssistant {
                                                        appleExerciseTime,
                                                        appleStandHour,
                                                        activeEnergy,
-                                                       flightsClimbed, HKObjectType.workoutType()]
+                                                       flightsClimbed,
+                                                       appleExcerise,
+                                                       HKObjectType.activitySummaryType(),
+                                                       HKObjectType.workoutType()]
         
         //4. Request Authorization
         HKHealthStore().requestAuthorization(toShare: healthKitTypesToWrite,

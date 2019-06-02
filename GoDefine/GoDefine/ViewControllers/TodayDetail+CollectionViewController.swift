@@ -96,8 +96,8 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             bgColor: UIColor(red:0.00, green:0.73, blue:0.01, alpha:1.0),
             fgColor: UIColor(red:0.75, green:1.00, blue:0.75, alpha:1.0),
             todayData: Float(today),
-            weeklyData: Float(lastWeek),
-            monthlyData: Float(lastMonth),
+            weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
+            monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "kCal")
     }
     
@@ -144,8 +144,8 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             bgColor: UIColor(red:0.18, green:1.00, blue:0.88, alpha:1.0),
             fgColor: UIColor(red:0.81, green:1.00, blue:0.97, alpha:1.0),
             todayData: Float(today),
-            weeklyData: Float(lastWeek),
-            monthlyData: Float(lastMonth),
+            weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
+                              monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "floors")
     }
     
@@ -191,8 +191,8 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             bgColor: UIColor(red:0.54, green:0.37, blue:1.00, alpha:1.0),
             fgColor: UIColor(red:0.80, green:0.73, blue:1.00, alpha:1.0),
             todayData: Float(today),
-            weeklyData: Float(lastWeek),
-            monthlyData: Float(lastMonth),
+            weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
+            monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "hours")
     }
     
@@ -238,8 +238,8 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             bgColor: UIColor(red:1.00, green:0.42, blue:0.00, alpha:1.0),
             fgColor: UIColor(red:1.00, green:0.82, blue:0.76, alpha:1.0),
             todayData: Float(toKilometer(meter: today)),
-            weeklyData: Float(toKilometer(meter: lastWeek)),
-            monthlyData: Float(toKilometer(meter: lastMonth)),
+            weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
+            monthlyData: Float(average(number: toKilometer(meter: lastMonth), total: DateTime.numDaysInMonth.rawValue)),
             unit: "km")
     }
     
@@ -285,8 +285,8 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             bgColor: UIColor(displayP3Red: 181/255, green: 0, blue: 1, alpha: 1),
             fgColor: UIColor(displayP3Red: 244/255, green: 217/255, blue: 1, alpha: 1),
             todayData: Float(today),
-            weeklyData: Float(lastWeek),
-            monthlyData: Float(lastMonth),
+            weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
+            monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "steps")
     }
     /*
@@ -303,6 +303,13 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
     
     private func toKilometer(meter: Double) -> Double{
         return round(meter*1000 / 1000.0) / 1000.0
+    }
+    
+    private func roundNumber(num: Double) -> Double{
+        return round(num*10.0) / 10.0
+    }
+    private func average(number: Double, total: Int) -> Double{
+        return roundNumber(num: number / Double(total))
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

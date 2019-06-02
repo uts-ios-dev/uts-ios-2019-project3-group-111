@@ -47,7 +47,7 @@ class HealthStoreServices{
         completion(total)
     }
     
-    func getDatatBetweenDays(identifier: HKCategoryTypeIdentifier, unit: HKUnit,startDate: Date, endDate:Date, completion: @escaping(_ retrievedSteps: Double ) -> Void){
+    func getDatatBetweenDays(identifier: String,startDate: Date, endDate:Date, completion: @escaping(_ retrievedSteps: Double ) -> Void){
         
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
         let startDate = cal.startOfDay(for: startDate)
@@ -61,7 +61,7 @@ class HealthStoreServices{
         group.enter()
         
         // Get step count
-        queryHealthCareData(identifier: identifier,unit: unit,  startDate: startDate, endDate: endDate, completion: { (data, totalNumberOfRecord) in
+        queryHealthCareData(identifier: identifier, startDate: startDate, endDate: endDate, completion: { (data, totalNumberOfRecord) in
             
             total = total + data
             count = count + 1
@@ -120,59 +120,67 @@ class HealthStoreServices{
         }
         
         
-//        let query = HKSampleQuery(sampleType: HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!, predicate: period, limit: 0, sortDescriptors: nil, resultsHandler: {
-//            (query, results, error) in
-//            if results == nil {
-//                print("There was an error running the query: \(error)")
-//            }
-//
-//            DispatchQueue.main.async() {
-//
-//                for activity in results as! [HKQuantitySample]
-//                {
-//                    let todayActiveEnergy = activity.quantity.doubleValue(for: HKUnit.count())
-//                    print(">>>>>",todayActiveEnergy )
-//                }
-//
-//            }
-//        })
         
         dataStore.execute(query)
     }
     
-    public func queryHealthCareData(identifier: HKCategoryTypeIdentifier, unit: HKUnit, startDate: Date, endDate:Date, completion: @escaping(_ retrievedSteps: Double, _ totalNumberOfRecord: Int) -> Void){
+    public func queryHealthCareData(identifier: String, startDate: Date, endDate:Date, completion: @escaping(_ retrievedSteps: Double, _ totalNumberOfRecord: Int) -> Void){
 
-        let calendar = Calendar.autoupdatingCurrent
         
-        var dateComponents = calendar.dateComponents(
-            [ .year, .month, .day ],
-            from: Date()
-        )
-        
-        // This line is required to make the whole thing work
-        dateComponents.calendar = calendar
-        let predicate = HKQuery.predicateForActivitySummary(with: dateComponents)
-
-//        let period = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [.strictStartDate])
-        let query = HKActivitySummaryQuery(predicate: predicate) { (query, summaries, error) in
-            
-            guard let summaries = summaries, summaries.count > 0
-                else {
-                    completion(0.0, 0)
-                    return
-                    // No data returned. Perhaps check for error
-            }
-            let standUnit    = HKUnit.count()
-            for summary in summaries{
-                let stand    = summary.appleStandHours.doubleValue(for: standUnit)
-                completion(stand, summaries.count)
-
-                print(stand)
-            }
-            
-
-            // Handle the activity rings data here
+        // Create the date components for the predicate
+        guard let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian) else {
+            fatalError("*** This should never fail. ***")
         }
+
+        let units: NSCalendar.Unit = [.day, .month, .year, .era]
+
+        var startDateComponents = calendar.components(units, from: startDate)
+        startDateComponents.calendar = calendar as Calendar
+
+        var endDateComponents = calendar.components(units, from: endDate as Date)
+        endDateComponents.calendar = calendar as Calendar
+
+
+//         Create the predicate for the query
+        let summariesWithinRange =  HKQuery.predicate(forActivitySummariesBetweenStart: startDateComponents, end: endDateComponents)
+
+        // Build the query
+        let query = HKActivitySummaryQuery(predicate: summariesWithinRange) { (query, summaries, error) -> Void in
+            guard let activitySummaries = summaries else {
+                guard error != nil else {
+                    fatalError("*** Did not return a valid error object. ***")
+                }
+                // Handle the error here...
+                completion(0.0, 0)
+                return
+            }
+            if activitySummaries.count > 0{
+                for thisSummary in activitySummaries {
+                    var data = 0.0
+                    switch identifier {
+                    case "appleStandHour":
+                        let standUnit = HKUnit.count()
+                        data = thisSummary.appleStandHours.doubleValue(for: standUnit)
+                    case "appleExcersise":
+                        let standUnit = HKUnit.hour()
+                        data = thisSummary.appleExerciseTime.doubleValue(for: standUnit)
+                    default:
+                        let standUnit = HKUnit.count()
+                        data = thisSummary.appleStandHours.doubleValue(for: standUnit)
+                    }
+                    completion(data, activitySummaries.count)
+                }
+            }else{
+                completion(0.0, 0)
+            }
+            
+        }
+
         dataStore.execute(query)
+
+       
+        
+        
+        
     }
 }
