@@ -27,8 +27,7 @@ class SteptCountDataStore {
         let endDate = Date()
         HealthStoreServices.shared.getDatatBetweenDays(identifier: .stepCount, unit: HKUnit.count(), startDate: startDate, endDate: endDate, completion: {
             (steps) in completion(steps)
-            }
-        )
+            })
 
     }
     
@@ -40,8 +39,7 @@ class SteptCountDataStore {
         
         HealthStoreServices.shared.getDatatBetweenDays(identifier: .stepCount, unit: HKUnit.count(), startDate: startDate, endDate: endDate, completion: {
             (steps) in completion(steps)
-            }
-        )
+            })
     }
     
     func getTheLastRecentMonth(completion: @escaping (_ stepRetrieve: Double) -> Void){
@@ -51,8 +49,7 @@ class SteptCountDataStore {
         let endDate = Date()
         HealthStoreServices.shared.getDatatBetweenDays(identifier: .stepCount, unit: HKUnit.count(), startDate: startDate, endDate: endDate, completion: {
             (steps) in completion(steps)
-        }
-        )
+        })
     }
     
     

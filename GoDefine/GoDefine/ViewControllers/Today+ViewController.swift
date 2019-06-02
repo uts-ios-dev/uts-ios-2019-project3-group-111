@@ -58,30 +58,36 @@ class TodayViewController: UIViewController {
 //
 //        })
 //    }
+<<<<<<< HEAD
     
+=======
+//
+>>>>>>> 424a2742bbc33d89c7627c96563710db415108e2
     private func authorizeHealthKit() {
-        
+
         HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
-            
+
             guard authorized else {
-                
+
                 let baseMessage = "HealthKit Authorization Failed"
-                
+
                 if let error = error {
                     print("\(baseMessage). Reason: \(error.localizedDescription)")
                 } else {
                     print(baseMessage)
                 }
-                
                 return
             }
+<<<<<<< HEAD
             
 //            self.loadTodaySteps()
 //            self.loadTheLastRecentWeekStepCount()
 //            self.loadTodayWalkingDistance()
 //            self.loadTheLastRecentWeekWalkingDistance()
+=======
+>>>>>>> 424a2742bbc33d89c7627c96563710db415108e2
             print("HealthKit Successfully Authorized.")
         }
-        
+
     }
 }
