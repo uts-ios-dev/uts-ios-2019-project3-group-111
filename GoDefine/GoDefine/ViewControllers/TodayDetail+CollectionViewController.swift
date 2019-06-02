@@ -95,7 +95,7 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Active energy",
             bgColor: UIColor(red:0.00, green:0.73, blue:0.01, alpha:1.0),
             fgColor: UIColor(red:0.75, green:1.00, blue:0.75, alpha:1.0),
-            todayData: Float(today),
+            todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "kCal")
@@ -143,9 +143,9 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Flights Climbed",
             bgColor: UIColor(red:0.18, green:1.00, blue:0.88, alpha:1.0),
             fgColor: UIColor(red:0.81, green:1.00, blue:0.97, alpha:1.0),
-            todayData: Float(today),
+            todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
-                              monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
+            monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "floors")
     }
     
@@ -190,7 +190,7 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Standing Hour",
             bgColor: UIColor(red:0.54, green:0.37, blue:1.00, alpha:1.0),
             fgColor: UIColor(red:0.80, green:0.73, blue:1.00, alpha:1.0),
-            todayData: Float(today),
+            todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "hours")
@@ -237,8 +237,8 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Walking",
             bgColor: UIColor(red:1.00, green:0.42, blue:0.00, alpha:1.0),
             fgColor: UIColor(red:1.00, green:0.82, blue:0.76, alpha:1.0),
-            todayData: Float(toKilometer(meter: today)),
-            weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
+            todayData: Float(roundNumber(num:toKilometer(meter: today))),
+            weeklyData: Float(average(number: toKilometer(meter: lastWeek), total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: toKilometer(meter: lastMonth), total: DateTime.numDaysInMonth.rawValue)),
             unit: "km")
     }
@@ -284,7 +284,7 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Step Count",
             bgColor: UIColor(displayP3Red: 181/255, green: 0, blue: 1, alpha: 1),
             fgColor: UIColor(displayP3Red: 244/255, green: 217/255, blue: 1, alpha: 1),
-            todayData: Float(today),
+            todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
             unit: "steps")
