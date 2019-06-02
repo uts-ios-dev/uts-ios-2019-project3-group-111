@@ -2,6 +2,10 @@ PODS:
   - Eureka (5.0.0)
   - fluid-slider (1.1.0):
     - pop
+  - Material (3.1.4):
+    - Material/Core (= 3.1.4)
+  - Material/Core (3.1.4):
+    - Motion (~> 3.1.0)
   - Motion (3.1.0):
     - Motion/Core (= 3.1.0)
   - Motion/Core (3.1.0)
@@ -13,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - Eureka
   - fluid-slider
+  - Material (~> 3.1.0)
   - Motion (~> 3.1.0)
   - pop (~> 1.0)
   - RLBAlertsPickers
@@ -23,6 +28,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Eureka
     - fluid-slider
+    - Material
     - Motion
     - pop
     - RLBAlertsPickers
@@ -32,12 +38,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
   fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
+  Material: 3622a0e18c8114e701b9d8509c3c4af28ed69ed8
   Motion: adfaf0a123322dfde099f49cf6cbe3abfa8f3899
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RLBAlertsPickers: 2548943b0cb16620904cbd926a645362d1b43963
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
 
-PODFILE CHECKSUM: 0e81b92a658133f07feb407a779dc5cf1cc05181
+PODFILE CHECKSUM: b86592f29f29763cf3eaa1af59fbbd96411f3a12
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.5.2

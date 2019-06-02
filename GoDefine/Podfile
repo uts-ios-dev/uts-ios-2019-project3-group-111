@@ -14,5 +14,6 @@ target 'GoDefine' do
   pod 'Eureka'
   pod 'SnapKit'
   pod 'Motion', '~> 3.1.0'
+  pod 'Material', '~> 3.1.0'
   pod 'SwiftyOnboard'
 end
