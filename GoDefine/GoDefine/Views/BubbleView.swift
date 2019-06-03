@@ -12,7 +12,7 @@ import Material
 
 class BubbleView: UIView {
     
-    let assignHeightRatio: CGFloat = 0.5
+    var assignHeightRatio: CGFloat!
     
     var containerView: UIView!
     var liquidView: UIView!

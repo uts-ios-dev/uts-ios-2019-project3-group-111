@@ -18,9 +18,11 @@ class GoDefineTabBarController: UITabBarController {
     
     override func viewWillLayoutSubviews() {
         
+        let originalHeight = tabBar.frame.height
+        let originalY = tabBar.frame.minY
         tabBar.shadowImage = UIImage()
-        tabBar.frame.size.height = CGFloat(78.0)
-        tabBar.frame.origin.y = view.frame.height - CGFloat(78.0)
+        tabBar.frame.size.height = originalHeight + CGFloat(29.0)
+        tabBar.frame.origin.y = originalY - CGFloat(29.0)
     }
     
 

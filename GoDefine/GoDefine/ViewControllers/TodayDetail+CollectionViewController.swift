@@ -12,15 +12,19 @@ struct ActivityData {
     var name: String
     var bgColor: UIColor
     var fgColor: UIColor
+    var goalData: Float
     var todayData: Float
     var weeklyData: Float
     var monthlyData: Float
+    var goal: Bool
     var unit: String
 }
 
 private let reuseIdentifier = "ActivityDetailCell"
 
 class TodayDetail_CollectionViewController: UICollectionViewController {
+    
+    let user = User()
     
     var activityDataList: [ActivityData] = []
 
@@ -92,12 +96,14 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
         // template ----------------------------------------------------------------------
         
         return ActivityData(
-            name: "Active energy",
+            name: "Energy",
             bgColor: UIColor(red:0.00, green:0.73, blue:0.01, alpha:1.0),
             fgColor: UIColor(red:0.75, green:1.00, blue:0.75, alpha:1.0),
+            goalData: user.total,
             todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
+            goal: (user.total < Float(roundNumber(num: today))),
             unit: "kCal")
     }
     
@@ -143,9 +149,11 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Flights Climbed",
             bgColor: UIColor(red:0.18, green:1.00, blue:0.88, alpha:1.0),
             fgColor: UIColor(red:0.81, green:1.00, blue:0.97, alpha:1.0),
+            goalData: user.climbing,
             todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
+            goal: (user.climbing < Float(roundNumber(num: today))),
             unit: "floors")
     }
     
@@ -190,9 +198,11 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Standing Hour",
             bgColor: UIColor(red:0.54, green:0.37, blue:1.00, alpha:1.0),
             fgColor: UIColor(red:0.80, green:0.73, blue:1.00, alpha:1.0),
+            goalData: user.standing,
             todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
+            goal: (user.standing < Float(roundNumber(num: today))),
             unit: "hours")
     }
     
@@ -237,9 +247,11 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Walking",
             bgColor: UIColor(red:1.00, green:0.42, blue:0.00, alpha:1.0),
             fgColor: UIColor(red:1.00, green:0.82, blue:0.76, alpha:1.0),
+            goalData: user.walking,
             todayData: Float(roundNumber(num:toKilometer(meter: today))),
             weeklyData: Float(average(number: toKilometer(meter: lastWeek), total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: toKilometer(meter: lastMonth), total: DateTime.numDaysInMonth.rawValue)),
+            goal: (user.walking < Float(roundNumber(num:toKilometer(meter: today)))),
             unit: "km")
     }
     
@@ -284,9 +296,11 @@ class TodayDetail_CollectionViewController: UICollectionViewController {
             name: "Step Count",
             bgColor: UIColor(displayP3Red: 181/255, green: 0, blue: 1, alpha: 1),
             fgColor: UIColor(displayP3Red: 244/255, green: 217/255, blue: 1, alpha: 1),
+            goalData: user.step,
             todayData: Float(roundNumber(num: today)),
             weeklyData: Float(average(number: lastWeek, total: DateTime.numDayInWeek.rawValue)),
             monthlyData: Float(average(number: lastMonth, total: DateTime.numDaysInMonth.rawValue)),
+            goal: (user.step < Float(roundNumber(num: today))),
             unit: "steps")
     }
     /*

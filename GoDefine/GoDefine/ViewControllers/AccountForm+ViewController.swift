@@ -59,6 +59,11 @@ class AccountFormViewController: UIViewController {
         sender.placeholder = ""
     }
     
+    @IBAction func textFieldEditingDidEnd(_ sender: UITextField) {
+        view.endEditing(true)
+    }
+    
+    
     @IBAction func dobTextFieldEditBegin(_ sender: UITextField) {
         sender.endEditing(true)
         sender.placeholder = nil

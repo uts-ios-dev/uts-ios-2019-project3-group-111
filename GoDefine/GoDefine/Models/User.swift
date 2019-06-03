@@ -82,4 +82,58 @@ class User {
             return defaults.float(forKey: "bfp")
         }
     }
+    
+    var workout: Float {
+        set(workout) {
+            defaults.set(workout, forKey: "workout")
+        }
+        get {
+            return defaults.float(forKey: "workout")
+        }
+    }
+    
+    var standing: Float {
+        set(standing) {
+            defaults.set(standing, forKey: "standing")
+        }
+        get {
+            return defaults.float(forKey: "standing")
+        }
+    }
+    
+    var walking: Float {
+        set(walking) {
+            defaults.set(walking, forKey: "walking")
+        }
+        get {
+            return defaults.float(forKey: "walking")
+        }
+    }
+    
+    var climbing: Float {
+        set(climbing) {
+            defaults.set(climbing, forKey: "climbing")
+        }
+        get {
+            return defaults.float(forKey: "climbing")
+        }
+    }
+    
+    var step: Float {
+        set(step) {
+            defaults.set(step, forKey: "step")
+        }
+        get {
+            return defaults.float(forKey: "step")
+        }
+    }
+    
+    var total: Float {
+        set(total) {
+            defaults.set(total, forKey: "total")
+        }
+        get {
+            return defaults.float(forKey: "total")
+        }
+    }
 }

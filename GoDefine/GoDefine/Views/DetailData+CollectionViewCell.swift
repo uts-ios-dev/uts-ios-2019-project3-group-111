@@ -26,6 +26,7 @@ class DetailData_CollectionViewCell: UICollectionViewCell {
         // populate data
         dataTypeLabel.text = activityData.name
         todayDataLabel.text = "\(activityData.todayData)"
+        goalDataLabel.text = "\(activityData.goalData)"
         weeklyDataLabel.text = "\(activityData.weeklyData)"
         monthlyDataLabel.text = "\(activityData.monthlyData)"
         todayUnitLabel.text = activityData.unit
@@ -53,7 +54,11 @@ class DetailData_CollectionViewCell: UICollectionViewCell {
         
         let stateSymbolImageRect = CGRect(x: 3, y: 3, width: 44.0, height: 44.0)
         let stateSymbolImageView = UIImageView(frame: stateSymbolImageRect)
-        stateSymbolImageView.image = UIImage(named: "checked_icon")
+        var imageName = "unchecked_icon"
+        if activityData.goal {
+            imageName = "checked_icon"
+        }
+        stateSymbolImageView.image = UIImage(named: imageName)
         stateSymbolView.addSubview(stateSymbolImageView)
         self.addSubview(stateSymbolView)
         
