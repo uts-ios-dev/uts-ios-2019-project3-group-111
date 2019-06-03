@@ -19,6 +19,7 @@ struct Award {
     var name: String
     var description: String
     var symbol: UIImage
+    var bigSymbol: UIImage
     var achieved: Bool
 }
 
@@ -49,20 +50,20 @@ class AwardsCollectionViewController: UICollectionViewController {
         awardTypes.append(AwardType(name: "Competitions", color: UIColor(displayP3Red: 137/255, green: 95/255, blue: 1, alpha: 1)))
         awardTypes.append(AwardType(name: "Special Prizes", color: UIColor(displayP3Red: 246/255, green: 6/255, blue: 110/255, alpha: 1)))
         awards.append([
-            Award(name: "Day Win", description: "Daily goals finished", symbol: UIImage(named: "awards_winaday")!, achieved: true),
-            Award(name: "Month Win", description: "Monthly goals finished", symbol: UIImage(named: "awards_winamonth")!, achieved: true),
-            Award(name: "Week Win", description: "Weekly goals finished", symbol: UIImage(named: "awards_winaweek")!, achieved: true)
+            Award(name: "Day Win", description: "Daily goals finished", symbol: UIImage(named: "awards_winaday")!, bigSymbol: UIImage(named: "awards_winaday-1")!, achieved: true),
+            Award(name: "Month Win", description: "Monthly goals finished", symbol: UIImage(named: "awards_winamonth")!, bigSymbol: UIImage(named: "awards_winamonth-1")!, achieved: true),
+            Award(name: "Week Win", description: "Weekly goals finished", symbol: UIImage(named: "awards_winaweek")!, bigSymbol: UIImage(named: "awards_winaweek-1")!, achieved: true)
             ])
         awards.append([
-            Award(name: "First", description: "1st \"Jogging Week\"", symbol: UIImage(named: "awards_number1")!, achieved: true),
-            Award(name: "Second", description: "2nd \"Jumper Festival\"", symbol: UIImage(named: "awards_number2")!, achieved: true),
-            Award(name: "Third", description: "3rd \"Pushing Carnival\"", symbol: UIImage(named: "awards_number3")!, achieved: true)
+            Award(name: "First", description: "1st \"Jogging Week\"", symbol: UIImage(named: "awards_number1")!, bigSymbol: UIImage(named: "awards_number1-1")!, achieved: true),
+            Award(name: "Second", description: "2nd \"Jumper Festival\"", symbol: UIImage(named: "awards_number2")!, bigSymbol: UIImage(named: "awards_number2-1")!, achieved: true),
+            Award(name: "Third", description: "3rd \"Pushing Carnival\"", symbol: UIImage(named: "awards_number3")!, bigSymbol: UIImage(named: "awards_number3-1")!, achieved: true)
             ])
         awards.append([
-            Award(name: "Stair King", description: "KING of the STAIRS", symbol: UIImage(named: "awards_kingstairs")!, achieved: true),
-            Award(name: "Easter Week", description: "Easter Week Fighter", symbol: UIImage(named: "awards_easterweek")!, achieved: false),
-            Award(name: "Climbing King", description: "KING of the CLIMBING", symbol: UIImage(named: "awards_kingclimbing")!, achieved: true),
-            Award(name: "Best", description: "You are the “Best”", symbol: UIImage(named: "awards_youarethebest")!, achieved: true)
+            Award(name: "Stair King", description: "KING of the STAIRS", symbol: UIImage(named: "awards_kingstairs")!, bigSymbol: UIImage(named: "awards_kingstairs-1")!, achieved: true),
+            Award(name: "Easter Week", description: "Easter Week Fighter", symbol: UIImage(named: "awards_easterweek")!, bigSymbol: UIImage(named: "awards_easterweek-1")!, achieved: false),
+            Award(name: "Climbing King", description: "KING of the CLIMBING", symbol: UIImage(named: "awards_kingclimbing")!, bigSymbol: UIImage(named: "awards_kingclimbing-1")!, achieved: true),
+            Award(name: "Best", description: "You are the “Best”", symbol: UIImage(named: "awards_youarethebest")!, bigSymbol: UIImage(named: "awards_youarethebest-1")!, achieved: true)
             ])
     }
 
@@ -98,7 +99,7 @@ class AwardsCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         if let awardCell = cell as? Award_CollectionViewCell {
-            awardCell.awardSymbolImage.image = awards[indexPath.section][indexPath.row].symbol
+            awardCell.awardSymbolImage.image = awards[indexPath.section][indexPath.row].bigSymbol
             awardCell.awardDescriptionLabel.text = awards[indexPath.section][indexPath.row].description
             return awardCell
         }

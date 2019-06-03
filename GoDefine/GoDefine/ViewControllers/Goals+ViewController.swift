@@ -12,6 +12,11 @@ import fluid_slider
 class GoalsViewController: UIViewController {
     
     let user = User()
+    var previousStanding: CGFloat = 0.0
+    var previousWorkout: CGFloat = 0.0
+    var previousWalking: CGFloat = 0.0
+    var previousClimging: CGFloat = 0.0
+    var previousStep: CGFloat = 0.0
 
     @IBOutlet var totalCalLabel: UILabel!
     @IBOutlet var totalSlider: Slider!
@@ -37,11 +42,11 @@ class GoalsViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 3
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (fraction * 6000) as NSNumber) ?? ""
-            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.black])
+            let string = formatter.string(from: (fraction * 4000) as NSNumber) ?? ""
+            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.white])
         }
         totalSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
-        totalSlider.setMaximumLabelAttributedText(NSAttributedString(string: "6000", attributes: labelTextAttributes))
+        totalSlider.setMaximumLabelAttributedText(NSAttributedString(string: "4000", attributes: labelTextAttributes))
         totalSlider.fraction = 0.5
         totalSlider.shadowOffset = CGSize(width: 0, height: 10)
         totalSlider.shadowBlur = 5
@@ -53,7 +58,7 @@ class GoalsViewController: UIViewController {
         }
         totalSlider.didEndTracking = { [weak self] _ in
             self?.setLabelHidden(false, animated: true)
-            self?.totalCalLabel.text = String(format: "%.1f", Float((self?.totalSlider.fraction)! * 6000))
+            self?.totalCalLabel.text = String(format: "%.1f", Float((self?.totalSlider.fraction)! * 4000))
             self?.workOutSlider.fraction = 0.80*(self?.totalSlider.fraction)!*0.6
             self?.standingSlider.fraction = 0.90*(self?.totalSlider.fraction)!*0.6
             self?.walkingSlider.fraction = 0.80*(self?.totalSlider.fraction)!*0.6
@@ -67,11 +72,11 @@ class GoalsViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 3
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (fraction * 12) as NSNumber) ?? ""
-            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.black])
+            let string = formatter.string(from: (fraction * 8) as NSNumber) ?? ""
+            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.white])
         }
         workOutSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
-        workOutSlider.setMaximumLabelAttributedText(NSAttributedString(string: "12", attributes: labelTextAttributes))
+        workOutSlider.setMaximumLabelAttributedText(NSAttributedString(string: "8", attributes: labelTextAttributes))
         workOutSlider.fraction = 0.5
         workOutSlider.shadowOffset = CGSize(width: 0, height: 10)
         workOutSlider.shadowBlur = 5
@@ -80,11 +85,13 @@ class GoalsViewController: UIViewController {
         workOutSlider.valueViewColor = .white
         workOutSlider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
+            self?.previousWorkout = (self?.workOutSlider.fraction)!
         }
         workOutSlider.didEndTracking = { [weak self] _ in
             self?.setLabelHidden(false, animated: true)
-            self?.workoutHrsLabel.text = String(format: "%.0f", Float((self?.workOutSlider.fraction)! * 12))
-            self?.totalSlider.fraction = 1/(0.8)*(self?.workOutSlider.fraction)!
+            let delta = (self?.workOutSlider.fraction)! - self!.previousWorkout
+            self?.workoutHrsLabel.text = String(format: "%.0f", Float((self?.workOutSlider.fraction)! * 8))
+            self?.totalSlider.fraction += 0.8 * delta / 5
             self?.updateLabels()
         }
         
@@ -93,11 +100,11 @@ class GoalsViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 3
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (fraction * 12) as NSNumber) ?? ""
-            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.black])
+            let string = formatter.string(from: (fraction * 10) as NSNumber) ?? ""
+            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.white])
         }
         standingSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
-        standingSlider.setMaximumLabelAttributedText(NSAttributedString(string: "12", attributes: labelTextAttributes))
+        standingSlider.setMaximumLabelAttributedText(NSAttributedString(string: "10", attributes: labelTextAttributes))
         standingSlider.fraction = 0.5
         standingSlider.shadowOffset = CGSize(width: 0, height: 10)
         standingSlider.shadowBlur = 5
@@ -106,11 +113,13 @@ class GoalsViewController: UIViewController {
         standingSlider.valueViewColor = .white
         standingSlider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
+            self?.previousStanding = (self?.standingSlider.fraction)!
         }
         standingSlider.didEndTracking = { [weak self] _ in
             self?.setLabelHidden(false, animated: true)
-            self?.standingHrsLabel.text = String(format: "%.0f", Float((self?.standingSlider.fraction)! * 12))
-            self?.totalSlider.fraction = (1/(0.9))*(self?.standingSlider.fraction)!
+            let delta = (self?.standingSlider.fraction)! - self!.previousStanding
+            self?.standingHrsLabel.text = String(format: "%.0f", Float((self?.standingSlider.fraction)! * 10))
+            self?.totalSlider.fraction += 0.9 * delta / 5
             self?.updateLabels()
         }
         
@@ -119,11 +128,11 @@ class GoalsViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 3
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (fraction * 10) as NSNumber) ?? ""
-            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.black])
+            let string = formatter.string(from: (fraction * 20) as NSNumber) ?? ""
+            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.white])
         }
         walkingSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
-        walkingSlider.setMaximumLabelAttributedText(NSAttributedString(string: "10", attributes: labelTextAttributes))
+        walkingSlider.setMaximumLabelAttributedText(NSAttributedString(string: "20", attributes: labelTextAttributes))
         walkingSlider.fraction = 0.5
         walkingSlider.shadowOffset = CGSize(width: 0, height: 10)
         walkingSlider.shadowBlur = 5
@@ -132,11 +141,13 @@ class GoalsViewController: UIViewController {
         walkingSlider.valueViewColor = .white
         walkingSlider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
+            self?.previousWalking = (self?.walkingSlider.fraction)!
         }
         walkingSlider.didEndTracking = { [weak self] _ in
             self?.setLabelHidden(false, animated: true)
-            self?.walkingKmLabel.text = String(format: "%.1f", Float((self?.walkingSlider.fraction)! * 10))
-            self?.totalSlider.fraction = (1/(0.8))*(self?.walkingSlider.fraction)!
+            let delta = (self?.walkingSlider.fraction)! - self!.previousWalking
+            self?.walkingKmLabel.text = String(format: "%.1f", Float((self?.walkingSlider.fraction)! * 20))
+            self?.totalSlider.fraction += 0.8 * delta / 5
             self?.updateLabels()
         }
         
@@ -145,11 +156,11 @@ class GoalsViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 3
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (fraction * 20) as NSNumber) ?? ""
-            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.black])
+            let string = formatter.string(from: (fraction * 50) as NSNumber) ?? ""
+            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.white])
         }
         climbingSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
-        climbingSlider.setMaximumLabelAttributedText(NSAttributedString(string: "20", attributes: labelTextAttributes))
+        climbingSlider.setMaximumLabelAttributedText(NSAttributedString(string: "50", attributes: labelTextAttributes))
         climbingSlider.fraction = 0.5
         climbingSlider.shadowOffset = CGSize(width: 0, height: 10)
         climbingSlider.shadowBlur = 5
@@ -158,11 +169,13 @@ class GoalsViewController: UIViewController {
         climbingSlider.valueViewColor = .white
         climbingSlider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
+            self?.previousClimging = (self?.climbingSlider.fraction)!
         }
         climbingSlider.didEndTracking = { [weak self] _ in
             self?.setLabelHidden(false, animated: true)
-            self?.climbingFlrLabel.text = String(format: "%.1f", Float((self?.climbingSlider.fraction)! * 20))
-            self?.totalSlider.fraction = (1/(0.75))*(self?.climbingSlider.fraction)!
+            let delta = (self?.climbingSlider.fraction)! - self!.previousClimging
+            self?.climbingFlrLabel.text = String(format: "%.1f", Float((self?.climbingSlider.fraction)! * 50))
+            self?.totalSlider.fraction += 0.75 * delta / 5
             self?.updateLabels()
         }
         
@@ -171,11 +184,11 @@ class GoalsViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 3
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (fraction * 4000) as NSNumber) ?? ""
-            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.black])
+            let string = formatter.string(from: (fraction * 40000) as NSNumber) ?? ""
+            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 10, weight: .medium), .foregroundColor: UIColor.white])
         }
         stepSlider.setMinimumLabelAttributedText(NSAttributedString(string: "0", attributes: labelTextAttributes))
-        stepSlider.setMaximumLabelAttributedText(NSAttributedString(string: "4000", attributes: labelTextAttributes))
+        stepSlider.setMaximumLabelAttributedText(NSAttributedString(string: "40000", attributes: labelTextAttributes))
         stepSlider.fraction = 0.5
         stepSlider.shadowOffset = CGSize(width: 0, height: 10)
         stepSlider.shadowBlur = 5
@@ -184,11 +197,13 @@ class GoalsViewController: UIViewController {
         stepSlider.valueViewColor = .white
         stepSlider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
+            self?.previousStep = (self?.stepSlider.fraction)!
         }
         stepSlider.didEndTracking = { [weak self] _ in
             self?.setLabelHidden(false, animated: true)
-            self?.stepLabel.text = String(format: "%.1f", Float((self?.stepSlider.fraction)! * 4000))
-            self?.totalSlider.fraction = (1/(0.85))*(self?.stepSlider.fraction)!
+            let delta = (self?.stepSlider.fraction)! - self!.previousStep
+            self?.stepLabel.text = String(format: "%.1f", Float((self?.stepSlider.fraction)! * 40000))
+            self?.totalSlider.fraction += 0.85 * delta / 5
             self?.updateLabels()
         }
     }
@@ -211,12 +226,12 @@ class GoalsViewController: UIViewController {
     }
     
     private func updateLabels() {
-        totalCalLabel.text = String(format: "%.1f", Float((totalSlider.fraction) * 6000))
-        workoutHrsLabel.text = String(format: "%.1f", Float((workOutSlider.fraction) * 12))
-        standingHrsLabel.text = String(format: "%.1f", Float((standingSlider.fraction) * 12))
-        walkingKmLabel.text = String(format: "%.1f", Float((walkingSlider.fraction) * 10))
-        climbingFlrLabel.text = String(format: "%.1f", Float((climbingSlider.fraction) * 20))
-        stepLabel.text = String(format: "%.1f", Float((stepSlider.fraction) * 4000))
+        totalCalLabel.text = String(format: "%.1f", Float((totalSlider.fraction) * 4000))
+        workoutHrsLabel.text = String(format: "%.1f", Float((workOutSlider.fraction) * 8))
+        standingHrsLabel.text = String(format: "%.1f", Float((standingSlider.fraction) * 10))
+        walkingKmLabel.text = String(format: "%.1f", Float((walkingSlider.fraction) * 20))
+        climbingFlrLabel.text = String(format: "%.1f", Float((climbingSlider.fraction) * 50))
+        stepLabel.text = String(format: "%.1f", Float((stepSlider.fraction) * 40000))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -230,12 +245,12 @@ class GoalsViewController: UIViewController {
     }
     
     func populateLabels() {
-        totalSlider.fraction = CGFloat(user.total / 6000)
-        workOutSlider.fraction = CGFloat(user.workout / 12)
-        standingSlider.fraction = CGFloat(user.standing / 12)
-        walkingSlider.fraction = CGFloat(user.walking / 10)
-        climbingSlider.fraction = CGFloat(user.climbing / 10)
-        stepSlider.fraction = CGFloat(user.step / 4000)
+        totalSlider.fraction = CGFloat(user.total / 4000)
+        workOutSlider.fraction = CGFloat(user.workout / 8)
+        standingSlider.fraction = CGFloat(user.standing / 10)
+        walkingSlider.fraction = CGFloat(user.walking / 20)
+        climbingSlider.fraction = CGFloat(user.climbing / 50)
+        stepSlider.fraction = CGFloat(user.step / 40000)
         updateLabels()
     }
     
